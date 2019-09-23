@@ -1,0 +1,44 @@
+.{% assign current_url = page.url | remove: 'index.html' %}
+
+{% comment %} Generate links to previous and next page. {% endcomment %}
+{% assign nav_items = site.data.navigation %}
+{% assign current_page = nil %}
+{% for link in nav_items %}
+  {% if current_page %}{% break %}{% endif %} {% comment %} Last Users page; stop looking for "next" link. {% endcomment %}
+  {% unless link.available %}{% continue %}{% endunless %} {% comment %} Skip unavailable links. {% endcomment %}
+  {% if link.url == current_url %}
+    {% assign current_page = link %}
+  {% endif %}
+{% endfor %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.description %}<meta name="description" content="{{ page.description | strip_newlines }}">{% endif %}
+    <title>{% if current_page %}{{ current_page.text }} - {% endif %}{{ site.title }}</title>
+    <link rel="icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  </head>
+  <body class="page">
+    <input class="menu-checkbox" id="menu" type="checkbox">
+    <header class="header">
+      <div class="header__container">
+        <label class="header__menu-toggle" for="menu"><span class="hamburger"><span class="hamburger__bar"></span><span class="hamburger__bar"></span><span class="hamburger__bar"></span></span></label>
+        <div class="header__logo">
+            <a class="header__logo-link" href="{{ "/" | prepend: site.baseurl }}">{{ site.title }}</a>
+        </div>
+      </div>
+    </header>
+    {% include navigation.html %}
+    <main class="content">
+      {{ content }}
+      <div class="content__nav">
+      </div>
+      <div class="content__meta">
+      </div>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

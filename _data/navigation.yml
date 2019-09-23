@@ -1,0 +1,15 @@
+- text: emacs
+  url: /emacs
+  available: false
+- text: i3
+  url: /i3
+  available: false
+- text: Platform Notes
+  url: /platform_notes
+  available: true
+- text: python
+  url: /python
+  available: false
+- text: tmux
+  url: /tmux
+  available: false

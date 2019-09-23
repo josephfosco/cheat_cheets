@@ -1,0 +1,20 @@
+# Site
+title: Cheat Sheets
+description: A collecton of cheat sheets
+permalink: /:title
+
+# Repository
+git:
+  repository_url: https://github.com/Timmy/ulx-docs
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Build
+markdown: kramdown
+highlighter: rouge
+exclude: ["README.md"]
