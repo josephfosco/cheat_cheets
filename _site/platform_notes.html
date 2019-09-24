@@ -1,0 +1,224 @@
+.
+
+
+
+
+
+   
+  
+   
+  
+   
+   
+  
+
+  
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Platform Notes - Cheat Sheets</title>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="page">
+    <input class="menu-checkbox" id="menu" type="checkbox">
+    <header class="header">
+      <div class="header__container">
+        <label class="header__menu-toggle" for="menu"><span class="hamburger"><span class="hamburger__bar"></span><span class="hamburger__bar"></span><span class="hamburger__bar"></span></span></label>
+        <div class="header__logo">
+            <a class="header__logo-link" href="/">Cheat Sheets</a>
+        </div>
+      </div>
+    </header>
+    <nav class="navigation">
+  <div class="navigation__container">
+    <label class="navigation__menu-toggle" for="menu"><span class="cross"></span></label>
+    <div class="navigation__category">Navigation</div>
+    <ul class="navigation__link-list">
+      
+        <li class="navigation__link-list-item navigation__link-list-item--unavailable">
+          <a class="navigation__link-list-link" href="/emacs">
+            emacs
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item navigation__link-list-item--unavailable">
+          <a class="navigation__link-list-link" href="/i3">
+            i3
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item navigation__link-list-item--active">
+          <a class="navigation__link-list-link navigation__link-list-link--active" href="/platform_notes">
+            Platform Notes
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item navigation__link-list-item--unavailable">
+          <a class="navigation__link-list-link" href="/python">
+            python
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="/tmux">
+            tmux
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content">
+      <h2 id="redis">Redis</h2>
+
+<p><strong>To delete items from the redis registry</strong></p>
+
+<p>access the redis host
+<code class="highlighter-rouge">$ redis-cli -h &lt;redis host&gt; (something like redis-primary.qa.ause2)</code></p>
+
+<p>to see if the entry you want to delete exists
+<code class="highlighter-rouge">$ hget psh-registry-qa &lt;service&gt;::&lt;version&gt; (something like adtalem-auc-lead-submit::1.0)</code>
+<code class="highlighter-rouge">$ hget psh-registry-production ping::1.0</code></p>
+
+<p><em>locally</em></p>
+
+<p><code class="highlighter-rouge">$ hget psh-registry &lt;service&gt;::&lt;version&gt; (something like adtalem-auc-lead-submit::1.0)</code></p>
+
+<p>to delete the entry
+<code class="highlighter-rouge">$ hdel psh-registry-qa &lt;service&gt;::&lt;version&gt; (something like adtalem-auc-lead-submit::1.0)</code></p>
+
+<p><strong>to view the registry in a browser</strong>
+<code class="highlighter-rouge">localhost:8000/registry/tasks</code></p>
+
+<p><em>or in production</em>
+<code class="highlighter-rouge">psh.leapfrogonline.net/registry/tasks</code></p>
+
+<p><strong>To see if redis secondary was marked as the master, and how to restart redis</strong></p>
+
+<p><code class="highlighter-rouge">redis-cli -h redis-secondary.qa.ause2</code><br />
+then run the <code class="highlighter-rouge">info</code> command. 
+There is a <code class="highlighter-rouge">Replication</code> section in the output that details the role the server is currently playing</p>
+
+<p>If you have access to start/stop the redis service. It would follow the normal start/stop of an lfo daemon.
+<code class="highlighter-rouge">sudo systemctl stop redis.service</code></p>
+
+<p>wait for sentinel to</p>
+
+<ol>
+  <li>detect the instance being down and</li>
+  <li>switch the server roles around</li>
+</ol>
+
+<p>then 
+<code class="highlighter-rouge">sudo systemctl start redis.service</code></p>
+
+<h2 id="artifactory">artifactory</h2>
+
+<p>When having trouble acessing artifactory (from a make script) An error like</p>
+
+<p><code class="highlighter-rouge">"HTTPError Could not fetch specs from https://gems.leapfrogonline.net/"</code></p>
+
+<p>Try stopping the vpn and restarting it.</p>
+
+<h2 id="epi">epi</h2>
+<p><strong>sample curl string:</strong>
+<code class="highlighter-rouge">curl -X POST localhost:9707/v1/valid_zipcode/0.2.0 -H "Content-Type: application/x-www-form-urlencoded" -d api_token=ERLNcpxusNI6isCGVEulrMUDWicvgtXC</code></p>
+
+<p><code class="highlighter-rouge">curl -X POST https://qa-epi.leapfrogonline.com/v1/external_configuration/1.0 -H "Content-Type: application/x-www-form-urlencoded" -d api_token=Rr3mrguFGXYfn2ncnZBbskcxnTruV5xD -d flow_id=46</code></p>
+
+<h2 id="hashi">hashi</h2>
+
+<p><strong>to look at events in the hashi db</strong></p>
+
+<p>to log in</p>
+
+<p><code class="highlighter-rouge">psql -h db1.qa.ause2 -U hashi -p 9999</code>
+^^^^^^^ logs into hashi database in qa<br />
+-h from consul services<br />
+-U from consul hashi config postgress_username<br />
+-p from consul hashi config postgress_port</p>
+
+<p>will prompt for password get it from
+consul hashi config postgres_password</p>
+
+<p><code class="highlighter-rouge">select * from messages where topic='preview.events.geo_locate.census_features';</code></p>
+
+<p><em>to see a the last event</em>
+<code class="highlighter-rouge">select max(id) from messages;</code>
+<code class="highlighter-rouge">select * from messages where id=&lt;id returned above&gt;;</code>
+<code class="highlighter-rouge">select * from messages where event=events.whatever.whatever.whatever</code></p>
+
+<p><em>another query for events</em>
+<code class="highlighter-rouge">select * from messages where body -&gt; 'v1' -&gt;&gt; 'flow_id' = '81';</code>
+<code class="highlighter-rouge">select * from messages where body -&gt; 'v1' -&gt;&gt; 'event_guid' = 'bc3a9dc1-ca41-4f2f-aa05-6d4f3e49e696';</code></p>
+
+<h2 id="prometheus">prometheus</h2>
+<p><strong>To start the prometheus exporter for phoenix</strong></p>
+
+<p><code class="highlighter-rouge">export SKIP_SERVICE_REGISTRATION=1</code>
+<code class="highlighter-rouge">export PROMETHEUS_EXPORTER_PORT=9932</code>
+<code class="highlighter-rouge">bundle exec foreman run -e .env,.env_local lfo-prometheus-exporter --name phoenix</code></p>
+
+      <div class="content__nav">
+      </div>
+      <div class="content__meta">
+      </div>
+    </main>
+    <footer class="footer">
+  <div class="footer__container">
+    <div class="footer__sections">
+      <div class="footer__section">
+        <h4 class="footer__section-title"></h4>
+        <ul class="footer__link-list">
+          <li class="footer__link-list-item">
+            <a class="footer__link-list-link" ></a>
+          </li>
+          <li class="footer__link-list-item">
+            <a class="footer__link-list-link" ></a>
+          </li>
+          <li class="footer__link-list-item">
+            <a class="footer__link-list-link" ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <h4 class="footer__section-title"></h4>
+        <ul class="footer__link-list">
+          <li class="footer__link-list-item">
+            <a class="footer__link-list-link" ></a>
+          </li>
+          <li class="footer__link-list-item">
+            <a class="footer__link-list-link" ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <h4 class="footer__section-title"></h4>
+        <ul class="footer__link-list">
+          <li class="footer__link-list-item">
+            <a class="footer__link-list-link" ></a>
+          </li>
+          <li class="footer__link-list-item">
+            <a class="footer__link-list-link" ></a>
+          </li>
+          <li class="footer__link-list-item">
+            <a class="footer__link-list-link" ></a>
+          </li>
+          <li class="footer__link-list-item">
+            <a class="footer__link-list-link" ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__line footer__line--last">Copyright 2019 Joseph Fosco </p>
+  </div>
+</footer>
+
+  </body>
+</html>

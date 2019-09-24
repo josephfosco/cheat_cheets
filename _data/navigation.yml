@@ -12,4 +12,4 @@
   available: false
 - text: tmux
   url: /tmux
-  available: false
+  available: true

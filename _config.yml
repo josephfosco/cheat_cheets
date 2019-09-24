@@ -2,6 +2,7 @@
 title: Cheat Sheets
 description: A collecton of cheat sheets
 permalink: /:title
+baseurl: .
 
 # Repository
 git:
