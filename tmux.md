@@ -12,3 +12,7 @@ and now whatever you type in one of the panes, will be populated in the others.
 To switch this feature off, you can type the following sequence:
 `ctrl + <prefix-key>`
 `setw synchronize-panes off`
+
+**To change the layout of panes**
+
+`ctrl + <prefix-key> space`
