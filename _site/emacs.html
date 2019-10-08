@@ -84,21 +84,18 @@
 </nav>
 
     <main class="content">
-      <p><strong>To execute the same command in multiple panes</strong></p>
+      <p><strong>To debug elisp code</strong></p>
 
-<p>wiuth multiple panes in a single window, type the following sequence:
-<code class="highlighter-rouge">ctrl + &lt;prefix-key&gt;</code>
-<code class="highlighter-rouge">setw synchronize-panes on</code></p>
+<p>Place (debug) where you would like to begin debugging</p>
 
-<p>and now whatever you type in one of the panes, will be populated in the others.</p>
+<p>Some debugging commands</p>
 
-<p>To switch this feature off, you can type the following sequence:
-<code class="highlighter-rouge">ctrl + &lt;prefix-key&gt;</code>
-<code class="highlighter-rouge">setw synchronize-panes off</code></p>
-
-<p><strong>To change the layout of panes</strong></p>
-
-<p><code class="highlighter-rouge">ctrl + &lt;prefix-key&gt; space</code></p>
+<ul>
+  <li>d: Step through</li>
+  <li>c: Continue</li>
+  <li>e: Eval expression</li>
+  <li>q: Top level (debugger code word for “quit”)</li>
+</ul>
 
       <div class="content__nav">
       </div>

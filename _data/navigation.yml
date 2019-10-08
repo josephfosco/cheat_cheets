@@ -1,6 +1,6 @@
 - text: emacs
   url: /emacs.html
-  available: false
+  available: true
 - text: i3
   url: /i3.html
   available: true

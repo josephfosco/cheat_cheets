@@ -52,9 +52,9 @@ Try stopping the vpn and restarting it.
 
 ## epi
 **sample curl string:**
-`curl -X POST localhost:9707/v1/valid_zipcode/0.2.0 -H "Content-Type: application/x-www-form-urlencoded" -d api_token=ERLNcpxusNI6isCGVEulrMUDWicvgtXC`
+`curl -X POST localhost:9707/v1/valid_zipcode/0.2.0 -H "Content-Type: application/x-www-form-urlencoded" -d api_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
 
-`curl -X POST https://qa-epi.leapfrogonline.com/v1/external_configuration/1.0 -H "Content-Type: application/x-www-form-urlencoded" -d api_token=Rr3mrguFGXYfn2ncnZBbskcxnTruV5xD -d flow_id=46`
+`curl -X POST https://qa-epi.leapfrogonline.com/v1/external_configuration/1.0 -H "Content-Type: application/x-www-form-urlencoded" -d api_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -d flow_id=46`
 
 ## hashi
 
