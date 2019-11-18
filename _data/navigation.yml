@@ -7,6 +7,9 @@
 - text: Platform Notes
   url: /platform_notes.html
   available: true
+- text: postgres
+  url: /postgres.html
+  available: true
 - text: python
   url: /python.html
   available: false

@@ -11,3 +11,11 @@ Some debugging commands
   - c: Continue
   - e: Eval expression
   - q: Top level (debugger code word for “quit”)
+
+**Return to prior buffer layout**
+
+ `C-c <left arrow>`
+
+**To brin emacs to the foreground after putting in the background**
+
+??????

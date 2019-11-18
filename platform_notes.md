@@ -1,5 +1,25 @@
 ---
 ---
+## Creating a Shell with environment vars from Consul
+### PYTHON
+
+`[jfosco@sch1-tools02 ~]$ sudo -u deploy -i
+[deploy@sch1-tools02 ~]$ cd src/newman/current/
+[deploy@sch1-tools02 current]$ source <(/etc/apps/config/deploy/render_config newman)
+[deploy@sch1-tools02 current]$ env/bin/python manage.py shell`
+
+type "exit" or ctl-d to leave the deploy shell and return to your prior user
+
+###  RUBY ***
+
+for infosphere
+there's a script on there called `console_quickstart`
+I believe it loads up the `bundle exec rails console` with some extra vars like the consul config (_I think_ on this latter part)
+so once you are on the server you'd do `sudo -u deploy bash /var/deploy/src/infosphere/current/console_quickstart.sh`
+and then the interaction is the same as it would be if you were local doing `bundle exec rails console`
+
+
+
 ## Redis
 
 **To delete items from the redis registry**

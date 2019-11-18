@@ -17,6 +17,10 @@
   
 
    
+   
+  
+
+   
   
    
    
@@ -67,6 +71,12 @@
           </a>
         </li>
       
+        <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./postgres.html">
+            postgres
+          </a>
+        </li>
+      
         <li class="navigation__link-list-item navigation__link-list-item--unavailable">
           <a class="navigation__link-list-link" href="./python.html">
             python
@@ -84,7 +94,25 @@
 </nav>
 
     <main class="content">
-      <h2 id="redis">Redis</h2>
+      <h2 id="creating-a-shell-with-environment-vars-from-consul">Creating a Shell with environment vars from Consul</h2>
+<h3 id="python">PYTHON</h3>
+
+<p><code class="highlighter-rouge">[jfosco@sch1-tools02 ~]$ sudo -u deploy -i
+[deploy@sch1-tools02 ~]$ cd src/newman/current/
+[deploy@sch1-tools02 current]$ source &lt;(/etc/apps/config/deploy/render_config newman)
+[deploy@sch1-tools02 current]$ env/bin/python manage.py shell</code></p>
+
+<p>type “exit” or ctl-d to leave the deploy shell and return to your prior user</p>
+
+<h3 id="ruby-">RUBY ***</h3>
+
+<p>for infosphere
+there’s a script on there called <code class="highlighter-rouge">console_quickstart</code>
+I believe it loads up the <code class="highlighter-rouge">bundle exec rails console</code> with some extra vars like the consul config (<em>I think</em> on this latter part)
+so once you are on the server you’d do <code class="highlighter-rouge">sudo -u deploy bash /var/deploy/src/infosphere/current/console_quickstart.sh</code>
+and then the interaction is the same as it would be if you were local doing <code class="highlighter-rouge">bundle exec rails console</code></p>
+
+<h2 id="redis">Redis</h2>
 
 <p><strong>To delete items from the redis registry</strong></p>
 
