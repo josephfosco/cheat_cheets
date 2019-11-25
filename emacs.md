@@ -25,7 +25,7 @@ Some debugging commands
 | Command | Description |
 |-----------|--------------|
 | c-space c-space |  set mark to remember position - no highlighting |
-| c-u c-space | move backwards in mark-ring (used to swap point and mark |
+| c-u c-space | move backwards in mark-ring (used to swap point and mark) - no highlighting |
 | M-x color-theme-print | get a list of all colors and their assignments |
 | Mx list-faces-display | interactive list of all color settings |
 
