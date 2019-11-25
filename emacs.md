@@ -18,4 +18,14 @@ Some debugging commands
 
 **To brin emacs to the foreground after putting in the background**
 
-??????
+`fg` or `fg %emacs`
+
+**Commands**
+
+| Command | Description |
+|-----------|--------------|
+| c-space c-space |  set mark to remember position - no highlighting |
+| c-u c-space | move backwards in mark-ring (used to swap point and mark |
+| M-x color-theme-print | get a list of all colors and their assignments |
+| Mx list-faces-display | interactive list of all color settings |
+

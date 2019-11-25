@@ -3,10 +3,10 @@
 ## Creating a Shell with environment vars from Consul
 ### PYTHON
 
-`[jfosco@sch1-tools02 ~]$ sudo -u deploy -i
-[deploy@sch1-tools02 ~]$ cd src/newman/current/
-[deploy@sch1-tools02 current]$ source <(/etc/apps/config/deploy/render_config newman)
-[deploy@sch1-tools02 current]$ env/bin/python manage.py shell`
+`sudo -u deploy -i
+cd src/newman/current/
+source <(/etc/apps/config/deploy/render_config newman)
+env/bin/python manage.py shell`
 
 type "exit" or ctl-d to leave the deploy shell and return to your prior user
 

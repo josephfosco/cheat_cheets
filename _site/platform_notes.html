@@ -21,7 +21,9 @@
   
 
    
+   
   
+
    
    
   
@@ -77,7 +79,7 @@
           </a>
         </li>
       
-        <li class="navigation__link-list-item navigation__link-list-item--unavailable">
+        <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./python.html">
             python
           </a>
@@ -97,10 +99,10 @@
       <h2 id="creating-a-shell-with-environment-vars-from-consul">Creating a Shell with environment vars from Consul</h2>
 <h3 id="python">PYTHON</h3>
 
-<p><code class="highlighter-rouge">[jfosco@sch1-tools02 ~]$ sudo -u deploy -i
-[deploy@sch1-tools02 ~]$ cd src/newman/current/
-[deploy@sch1-tools02 current]$ source &lt;(/etc/apps/config/deploy/render_config newman)
-[deploy@sch1-tools02 current]$ env/bin/python manage.py shell</code></p>
+<p><code class="highlighter-rouge">sudo -u deploy -i
+cd src/newman/current/
+source &lt;(/etc/apps/config/deploy/render_config newman)
+env/bin/python manage.py shell</code></p>
 
 <p>type “exit” or ctl-d to leave the deploy shell and return to your prior user</p>
 
