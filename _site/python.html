@@ -103,6 +103,14 @@
 <code class="highlighter-rouge">&gt;&gt;&gt; f"Hello, {name}. You are {age}."</code>
 <code class="highlighter-rouge">'Hello, Eric. You are 74.'</code></p>
 
+<p><strong>pyenv installation problems</strong>
+If you receive the error
+<code class="highlighter-rouge">ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?</code>
+try
+<code class="highlighter-rouge">$sudo dnf install compat-openssl10-devel --allowerasing</code>
+then install again. If ths works then return to normal with
+<code class="highlighter-rouge">sudo dnf install openssl-devel --allowerasing</code></p>
+
 
       <div class="content__nav">
       </div>
