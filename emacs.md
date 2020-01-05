@@ -16,7 +16,7 @@ Some debugging commands
 
  `C-c <left arrow>`
 
-**To brin emacs to the foreground after putting in the background**
+**To bring emacs to the foreground after putting in the background**
 
 `fg` or `fg %emacs`
 
