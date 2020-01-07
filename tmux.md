@@ -15,13 +15,19 @@ To switch this feature off, you can type the following sequence:
 
 **To swap 2 panes**
 
-`<prefix key> { or }`
+`<prefix-key> { or }`
 
 **To cycle panes around**
 
-`<prefix key> ctl + o`
+`<prefix-key> ctl + o`
 
 **To change the layout of panes**
 
 `ctrl + <prefix-key> space`
+
+**To move a pane to a new window**
+
+`break-pane`
+-- or --
+`<prefix-key> !`
 
