@@ -7,6 +7,9 @@
 - text: i3
   url: /i3.html
   available: true
+- text: linux
+  url: /linux.html
+  available: true
 - text: Platform Notes
   url: /platform_notes.html
   available: true
