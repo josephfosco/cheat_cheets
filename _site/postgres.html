@@ -116,9 +116,19 @@
 </nav>
 
     <main class="content">
-      <p><strong>To see all database table (locally)</strong></p>
+      <p><strong>T0 login to postgres commandline</strong>
+<code class="highlighter-rouge">sudo –i –u postgres psql</code></p>
 
-<p><code class="highlighter-rouge">sudo –i –u postgres psql</code>
+<p>This logs you in as the postgres user</p>
+
+<p><strong>To see all databases</strong>
+while logged in as postgres user
+<code class="highlighter-rouge">\l</code></p>
+
+<p><strong>To connect to a specific database</strong>
+<code class="highlighter-rouge">\c &lt;database name&gt;</code></p>
+
+<p><strong>To see all database tables (locally)</strong>
 <code class="highlighter-rouge">\dt</code></p>
 
 
