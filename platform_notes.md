@@ -109,3 +109,7 @@ consul hashi config postgres\_password
 `export SKIP_SERVICE_REGISTRATION=1`
 `export PROMETHEUS_EXPORTER_PORT=9932`
 `bundle exec foreman run -e .env,.env_local lfo-prometheus-exporter --name phoenix`
+
+## Consul
+To get the consul ACL master Token look at:
+`https://gh.leapfrogonline.net/efisher/ansible-repo/blob/f94eb4d25153f54a0f0db2638407f1e122d57963/inventory/group_vars/consul/consul_vars.yml#L14`
