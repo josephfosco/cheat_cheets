@@ -1,3 +1,6 @@
+- text: airflow
+  url: /airflow.html
+  available: true
 - text: emacs
   url: /emacs.html
   available: true
