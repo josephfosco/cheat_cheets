@@ -30,3 +30,8 @@ try
 then install again. If ths works then return to normal with
 `sudo dnf install openssl-devel --allowerasing`
 
+**To run the prometheus exporter for a python.django program**
+`env/bin/honcho start -e .env,.env_local psh_comcast_prometheus`
+
+This is for psh-comcast<br>
+"psh_comcast_prometheus" is an entry in the procfile

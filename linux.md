@@ -1,6 +1,11 @@
 ---
 ---
 
+**ls sorted by date/time**
+
+use -t flag eg: 
+`ls -lt`
+
 **To connect to a wireless network from the command line**
 
 First, run
