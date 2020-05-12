@@ -32,6 +32,14 @@
    
   
 
+   
+   
+  
+
+   
+   
+  
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,6 +86,12 @@
         </li>
       
         <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./linux.html">
+            linux
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./platform_notes.html">
             Platform Notes
           </a>
@@ -101,12 +115,45 @@
           </a>
         </li>
       
+        <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./wordpress.html">
+            Wordpress
+          </a>
+        </li>
+      
     </ul>
   </div>
 </nav>
 
     <main class="content">
-      <p><strong>Submodules</strong></p>
+      <p><strong>Stash</strong></p>
+
+<p>To stash current uncommitted changes
+<code class="highlighter-rouge">git stash</code></p>
+
+<p>To list changes stages
+<code class="highlighter-rouge">git stash list</code></p>
+
+<p>To inspect stashed changes
+<code class="highlighter-rouge">git stash show</code></p>
+
+<p>To retrieve stashed changes on current branch run
+<code class="highlighter-rouge">git stash apply &lt;stash&gt;</code></p>
+
+<p>To clear all stached entries
+<code class="highlighter-rouge">git stash clear</code></p>
+
+<p>To remove a single stashed entry
+<code class="highlighter-rouge">git stash drop &lt;stash&gt;</code></p>
+
+<p><strong>Submodules</strong></p>
+
+<p>After cloning a repo with submodules run the following commands
+<code class="highlighter-rouge">git submodule init</code>
+<code class="highlighter-rouge">git submodule update</code></p>
+
+<p>To update all submodules in a repo to their master branch run
+<code class="highlighter-rouge">git submodule update --remote</code></p>
 
 
       <div class="content__nav">

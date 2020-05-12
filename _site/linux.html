@@ -126,61 +126,20 @@
 </nav>
 
     <main class="content">
-      <p><strong>To debug elisp code</strong></p>
+      <p><strong>To tar and gzip a directory</strong></p>
 
-<p>Place (debug) where you would like to begin debugging</p>
+<p><code class="highlighter-rouge">tar -zcvf archive-name.tar.gz directory-name</code></p>
 
-<p>Some debugging commands</p>
+<p>Where,</p>
 
-<ul>
-  <li>d: Step through</li>
-  <li>c: Continue</li>
-  <li>e: Eval expression</li>
-  <li>q: Top level (debugger code word for “quit”)</li>
-</ul>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-z : Compress archive using gzip program in Linux or Unix
 
-<p><strong>Return to prior buffer layout</strong></p>
+-c : Create archive on Linux
 
-<p><code class="highlighter-rouge">C-c &lt;left arrow&gt;</code></p>
+-v : Verbose i.e display progress while creating archive
 
-<p><strong>To write a file with a name similar to another file</strong></p>
-
-<p><code class="highlighter-rouge">C-w &lt;file-name&gt;</code>
-  <code class="highlighter-rouge">M n</code>
-  <code class="highlighter-rouge">Enter</code></p>
-
-<p><strong>To bring emacs to the foreground after putting in the background</strong></p>
-
-<p><code class="highlighter-rouge">fg</code> or <code class="highlighter-rouge">fg %emacs</code></p>
-
-<p><strong>Commands</strong></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Command</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>c-space c-space</td>
-      <td>set mark to remember position - no highlighting</td>
-    </tr>
-    <tr>
-      <td>c-u c-space</td>
-      <td>move backwards in mark-ring (used to swap point and mark) - no highlighting</td>
-    </tr>
-    <tr>
-      <td>M-x color-theme-print</td>
-      <td>get a list of all colors and their assignments</td>
-    </tr>
-    <tr>
-      <td>Mx list-faces-display</td>
-      <td>interactive list of all color settings</td>
-    </tr>
-  </tbody>
-</table>
+-f : Archive File name
+</code></pre></div></div>
 
 
       <div class="content__nav">

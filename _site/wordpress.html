@@ -126,61 +126,16 @@
 </nav>
 
     <main class="content">
-      <p><strong>To debug elisp code</strong></p>
-
-<p>Place (debug) where you would like to begin debugging</p>
-
-<p>Some debugging commands</p>
-
+      <p><strong>To see local wordpress sites on another computer on the local network</strong></p>
 <ul>
-  <li>d: Step through</li>
-  <li>c: Continue</li>
-  <li>e: Eval expression</li>
-  <li>q: Top level (debugger code word for “quit”)</li>
+  <li>In wordpress Settings-&gt;General, both Wordpress Address and Site Address should point to the ip of the hosting computer
+these correspond to “siteurl” and “home” in the mysql db options table. The url will look something like:
+<code class="highlighter-rouge">http://192.168.1.17/~joseph/spark</code> 
+instead of
+<code class="highlighter-rouge">httpd:localhost/~joseph/spark</code></li>
+  <li>Fedora has a firewall running by default that wil block access to port 80. To disable it, run:
+<code class="highlighter-rouge">sudo systemctl stop firewalld</code></li>
 </ul>
-
-<p><strong>Return to prior buffer layout</strong></p>
-
-<p><code class="highlighter-rouge">C-c &lt;left arrow&gt;</code></p>
-
-<p><strong>To write a file with a name similar to another file</strong></p>
-
-<p><code class="highlighter-rouge">C-w &lt;file-name&gt;</code>
-  <code class="highlighter-rouge">M n</code>
-  <code class="highlighter-rouge">Enter</code></p>
-
-<p><strong>To bring emacs to the foreground after putting in the background</strong></p>
-
-<p><code class="highlighter-rouge">fg</code> or <code class="highlighter-rouge">fg %emacs</code></p>
-
-<p><strong>Commands</strong></p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Command</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>c-space c-space</td>
-      <td>set mark to remember position - no highlighting</td>
-    </tr>
-    <tr>
-      <td>c-u c-space</td>
-      <td>move backwards in mark-ring (used to swap point and mark) - no highlighting</td>
-    </tr>
-    <tr>
-      <td>M-x color-theme-print</td>
-      <td>get a list of all colors and their assignments</td>
-    </tr>
-    <tr>
-      <td>Mx list-faces-display</td>
-      <td>interactive list of all color settings</td>
-    </tr>
-  </tbody>
-</table>
 
 
       <div class="content__nav">

@@ -16,6 +16,12 @@ Some debugging commands
 
  `C-c <left arrow>`
 
+**To write a file with a name similar to another file**
+
+ `C-w <file-name>`
+  `M n`
+  `Enter`
+
 **To bring emacs to the foreground after putting in the background**
 
 `fg` or `fg %emacs`
