@@ -146,36 +146,21 @@
 </nav>
 
     <main class="content">
-      <p><strong>To execute the same command in multiple panes</strong></p>
+      <p><strong>To run a mssql query locally</strong></p>
 
-<p>with multiple panes in a single window, type the following sequence:
-<code class="highlighter-rouge">ctrl + &lt;prefix-key&gt;</code>
-<code class="highlighter-rouge">setw synchronize-panes on</code></p>
+<ul>
+  <li>Go to the airflow-add local directory</li>
+  <li>In the terminal type make shell</li>
+  <li>Enter the following python commands</li>
+</ul>
 
-<p>and now whatever you type in one of the panes, will be populated in the others.</p>
-
-<p>To switch this feature off, you can type the following sequence:
-<code class="highlighter-rouge">ctrl + &lt;prefix-key&gt;</code>
-<code class="highlighter-rouge">setw synchronize-panes off</code></p>
-
-<p><strong>To swap 2 panes</strong></p>
-
-<p><code class="highlighter-rouge">&lt;prefix-key&gt; { or }</code></p>
-
-<p><strong>To cycle panes around</strong></p>
-
-<p><code class="highlighter-rouge">&lt;prefix-key&gt; ctl + o</code></p>
-
-<p><strong>To change the layout of panes</strong></p>
-
-<p><code class="highlighter-rouge">ctrl + &lt;prefix-key&gt; space</code></p>
-
-<p><strong>To move a pane to a new window</strong></p>
-
-<p><code class="highlighter-rouge">break-pane</code>
-– or –
-<code class="highlighter-rouge">&lt;prefix-key&gt; !</code></p>
-
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    In [1]: import records
+    In [2]: db = records.Database('mssql+pymssql://LEAPFROGONLINE\psh-adwords:a4v4a_bb3oz@sv-bidb02-prod.leapfrogonline.com:1433/dw')
+    In [x]: q = """&lt;query&gt;"""
+    In [6]: results = db.query(q)
+    In [7]: results.as_dict()
+</code></pre></div></div>
+<p>The string in the records.Database call can be found at: <code class="highlighter-rouge">https://consul.leapfrogonline.net/ui/ause2/kv/config/apps/tool_sched/SQL_DSN/edit</code></p>
 
       <div class="content__nav">
       </div>

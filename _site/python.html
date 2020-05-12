@@ -40,6 +40,14 @@
    
   
 
+   
+   
+  
+
+   
+   
+  
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -68,6 +76,12 @@
     <ul class="navigation__link-list">
       
         <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./airflow.html">
+            airflow
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./emacs.html">
             emacs
           </a>
@@ -76,6 +90,12 @@
         <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./git.html">
             git
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./hubot.html">
+            hubot
           </a>
         </li>
       
@@ -133,6 +153,18 @@
 <code class="highlighter-rouge">&gt;&gt;&gt; f"Hello, {name}. You are {age}."</code>
 <code class="highlighter-rouge">'Hello, Eric. You are 74.'</code></p>
 
+<p><strong>Mocking a method on an instance of a class</strong></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">@</span><span class="n">patch</span><span class="p">(</span><span class="s">"objectA"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">test1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mobj</span><span class="p">):</span>
+    <span class="n">mock_method</span> <span class="o">=</span> <span class="n">MagicMock</span><span class="p">()</span>
+    <span class="n">mobj</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">mock_method</span>
+    
+    <span class="n">function_to_test</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">mobj</span><span class="p">()</span><span class="o">.</span><span class="n">method</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span></code></pre></figure>
+
+<p>It appears that mobj() indicates ANY instance of the class mobj</p>
+
 <p><strong>pyenv installation problems</strong>
 If you receive the error
 <code class="highlighter-rouge">ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?</code>
@@ -141,6 +173,11 @@ try
 then install again. If ths works then return to normal with
 <code class="highlighter-rouge">sudo dnf install openssl-devel --allowerasing</code></p>
 
+<p><strong>To run the prometheus exporter for a python.django program</strong>
+<code class="highlighter-rouge">env/bin/honcho start -e .env,.env_local psh_comcast_prometheus</code></p>
+
+<p>This is for psh-comcast<br />
+“psh_comcast_prometheus” is an entry in the procfile</p>
 
       <div class="content__nav">
       </div>
