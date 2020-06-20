@@ -23,6 +23,14 @@ kill-rectangle 【Ctrl+x r k】 → Delete selected column of text.
   Move cursor to end of rectangle.
   Alt+x kill-rectangle`
 
+**To Insert Text or Spaces at the Start of a Region**
+
+```
+Place cursor at the start of the first line
+Ctrl+space
+Highlight text through thelast line of the Region
+Alt+x string-insert-rectangle
+```
 
 **Return to prior buffer layout**
 

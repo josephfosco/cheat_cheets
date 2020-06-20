@@ -16,6 +16,9 @@
 - text: linux
   url: /linux.html
   available: true
+- text: msos
+  url: /msos.html
+  available: true
 - text: Platform Notes
   url: /platform_notes.html
   available: true
@@ -27,4 +30,7 @@
   available: true
 - text: tmux
   url: /tmux.html
+  available: true
+- text: vi
+  url: /vi.html
   available: true
