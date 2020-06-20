@@ -31,10 +31,23 @@ Ctrl+space
 Highlight text through thelast line of the Region
 Alt+x string-insert-rectangle
 ```
+**Return to prior buffer layout**
+
+ `C-c <left arrow>`
 
 **Return to prior buffer layout**
 
  `C-c <left arrow>`
+
+**To write a file with a name similar to another file**
+
+ `C-w <file-name>`
+  `M n`
+  `Enter`
+
+**To bring emacs to the foreground after putting in the background**
+
+`fg` or `fg %emacs`
 
 **Open a new buffer for a new file**
 
@@ -52,8 +65,4 @@ Some debugging commands
   - c: Continue
   - e: Eval expression
   - q: Top level (debugger code word for “quit”)
-
-**To bring emacs to the foreground after putting in the background**
-
-`fg` or `fg %emacs`
 

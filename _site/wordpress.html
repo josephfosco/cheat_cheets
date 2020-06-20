@@ -164,12 +164,17 @@
 </nav>
 
     <main class="content">
-      <p><strong>Undo</strong></p>
+      <p><strong>To see local wordpress sites on another computer on the local network</strong></p>
+<ul>
+  <li>In wordpress Settings-&gt;General, both Wordpress Address and Site Address should point to the ip of the hosting computer
+these correspond to “siteurl” and “home” in the mysql db options table. The url will look something like:
+<code class="highlighter-rouge">http://192.168.1.17/~joseph/spark</code> 
+instead of
+<code class="highlighter-rouge">httpd:localhost/~joseph/spark</code></li>
+  <li>Fedora has a firewall running by default that wil block access to port 80. To disable it, run:
+<code class="highlighter-rouge">sudo systemctl stop firewalld</code></li>
+</ul>
 
-<p><code class="highlighter-rouge">u</code>
-<strong>Redo</strong></p>
-
-<p><code class="highlighter-rouge">Ctrl-r</code></p>
 
       <div class="content__nav">
       </div>
