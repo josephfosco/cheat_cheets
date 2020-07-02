@@ -33,6 +33,7 @@
   available: true
 - text: vi
   url: /vi.html
+  available: true
 - text: Wordpress
   url: /wordpress.html
   available: true
