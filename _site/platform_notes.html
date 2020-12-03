@@ -56,6 +56,10 @@
    
   
 
+   
+   
+  
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -161,6 +165,12 @@
           </a>
         </li>
       
+        <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./iprospect.html">
+            iProspect
+          </a>
+        </li>
+      
     </ul>
   </div>
 </nav>
@@ -207,6 +217,13 @@ and then the interaction is the same as it would be if you were local doing <cod
 
 <p><em>or in production</em>
 <code class="highlighter-rouge">psh.leapfrogonline.net/registry/tasks</code></p>
+
+<p><strong>redis memory alerts</strong></p>
+
+<p>To run the script to expire sessions for a rogue bot ip
+get the redisreporter repo https://github.com/iprospect-usa/redisreporter</p>
+
+<p><code class="highlighter-rouge">$ env/bin/python mulderexpire.py --host redis-primary.production.ause2 --ip &lt;ip to remove e.g. 94.156.174.137&gt; --limit 10000 --expire 5</code></p>
 
 <p><strong>To see if redis secondary was marked as the master, and how to restart redis</strong></p>
 

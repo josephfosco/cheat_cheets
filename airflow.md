@@ -15,3 +15,11 @@
     In [7]: results.as_dict()
 ```      
 The string in the records.Database call can be found at: `https://consul.leapfrogonline.net/ui/ause2/kv/config/apps/tool_sched/SQL_DSN/edit`
+
+**Files created in Airflow dags are stored at**
+`tools1.qa.ause2, cd into /mnt/etlfs/airflow/files (maybe su to deploy first?)`
+
+
+
+
+

@@ -44,6 +44,13 @@ to delete the entry
 *or in production*
 `psh.leapfrogonline.net/registry/tasks`
 
+**redis memory alerts**
+
+To run the script to expire sessions for a rogue bot ip
+get the redisreporter repo https://github.com/iprospect-usa/redisreporter
+
+`$ env/bin/python mulderexpire.py --host redis-primary.production.ause2 --ip <ip to remove e.g. 94.156.174.137> --limit 10000 --expire 5`
+
 **To see if redis secondary was marked as the master, and how to restart redis**
 
 `redis-cli -h redis-secondary.qa.ause2`  

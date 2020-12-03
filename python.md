@@ -8,6 +8,14 @@
 `>>> f"Hello, {name}. You are {age}."`
 `'Hello, Eric. You are 74.'`
 
+**To reload a python file in the shell**
+```
+import importlib
+import <module name> #import the module here, so that it can be reloaded.
+importlib.reload(<module name>)
+from inputs import A # or whatever name you want.
+```
+
 **Mocking a method on an instance of a class**
 
 {% highlight python %}
@@ -35,3 +43,21 @@ then install again. If ths works then return to normal with
 
 This is for psh-comcast<br>
 "psh_comcast_prometheus" is an entry in the procfile
+
+**List all versions of python available in pyenv**
+`pyenv install -l`
+
+**Update list of python versions available to pyenv**
+`pyenv update`
+
+**Python Mocks**
+
+Pycon Mock talk<br>
+https://www.youtube.com/watch?v=ww1UsGZV8fQ
+
+**Do not bufer log messages**
+
+Use PYTHONUNBUFFERED=1 as in<br>
+`PYTHONUNBUFFERED=1 make start`
+
+

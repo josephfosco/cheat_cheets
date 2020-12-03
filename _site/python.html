@@ -56,6 +56,10 @@
    
   
 
+   
+   
+  
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -161,6 +165,12 @@
           </a>
         </li>
       
+        <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./iprospect.html">
+            iProspect
+          </a>
+        </li>
+      
     </ul>
   </div>
 </nav>
@@ -172,6 +182,13 @@
 <code class="highlighter-rouge">&gt;&gt;&gt; age = 74</code>
 <code class="highlighter-rouge">&gt;&gt;&gt; f"Hello, {name}. You are {age}."</code>
 <code class="highlighter-rouge">'Hello, Eric. You are 74.'</code></p>
+
+<p><strong>To reload a python file in the shell</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import importlib
+import &lt;module name&gt; #import the module here, so that it can be reloaded.
+importlib.reload(&lt;module name&gt;)
+from inputs import A # or whatever name you want.
+</code></pre></div></div>
 
 <p><strong>Mocking a method on an instance of a class</strong></p>
 
@@ -198,6 +215,23 @@ then install again. If ths works then return to normal with
 
 <p>This is for psh-comcast<br />
 “psh_comcast_prometheus” is an entry in the procfile</p>
+
+<p><strong>List all versions of python available in pyenv</strong>
+<code class="highlighter-rouge">pyenv install -l</code></p>
+
+<p><strong>Update list of python versions available to pyenv</strong>
+<code class="highlighter-rouge">pyenv update</code></p>
+
+<p><strong>Python Mocks</strong></p>
+
+<p>Pycon Mock talk<br />
+https://www.youtube.com/watch?v=ww1UsGZV8fQ</p>
+
+<p><strong>Do not bufer log messages</strong></p>
+
+<p>Use PYTHONUNBUFFERED=1 as in<br />
+<code class="highlighter-rouge">PYTHONUNBUFFERED=1 make start</code></p>
+
 
       <div class="content__nav">
       </div>
