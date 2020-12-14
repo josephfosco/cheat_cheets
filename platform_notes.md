@@ -22,6 +22,11 @@ and then the interaction is the same as it would be if you were local doing `bun
 
 ## Redis
 
+**To delete multiple keys based on a wildcard**
+
+In the shell type something like (to delete all keys that start with "humana:*")
+`redis-cli KEYS "humana:*" | xargs redis-cli del`
+
 **To delete items from the redis registry**
 
 access the redis host

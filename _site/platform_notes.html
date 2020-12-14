@@ -196,6 +196,11 @@ and then the interaction is the same as it would be if you were local doing <cod
 
 <h2 id="redis">Redis</h2>
 
+<p><strong>To delete multiple keys based on a wildcard</strong></p>
+
+<p>In the shell type something like (to delete all keys that start with “humana:*”)
+<code class="highlighter-rouge">redis-cli KEYS "humana:*" | xargs redis-cli del</code></p>
+
 <p><strong>To delete items from the redis registry</strong></p>
 
 <p>access the redis host
