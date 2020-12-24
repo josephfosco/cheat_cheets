@@ -198,13 +198,28 @@
 
 <p><strong>Submodules</strong></p>
 
-<p>After cloning a repo with submodules run the following commands
+<p><strong><em>After cloning a repo with submodules run the following commands</em></strong>
 <code class="highlighter-rouge">git submodule init</code>
 <code class="highlighter-rouge">git submodule update</code></p>
 
-<p>To update all submodules in a repo to their master branch run
+<p><strong><em>To update all submodules in a repo to their master branch run</em></strong>
 <code class="highlighter-rouge">git submodule update --remote</code></p>
 
+<p><strong><em>To remove/delete a submodule</em></strong></p>
+
+<p>The 3-step removal process is:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0. mv a/submodule a/submodule_tmp
+
+1. git submodule deinit -f -- a/submodule    
+2. rm -rf .git/modules/a/submodule
+3. git rm -f a/submodule
+# Note: a/submodule (no trailing slash)
+
+# or, if you want to leave it in your working tree and have done step 0
+3.   git rm --cached a/submodule
+3bis mv a/submodule_tmp a/submodule
+</code></pre></div></div>
 
       <div class="content__nav">
       </div>
