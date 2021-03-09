@@ -202,6 +202,25 @@ from inputs import A # or whatever name you want.
 
 <p>It appears that mobj() indicates ANY instance of the class mobj</p>
 
+<p><strong>Mocking an atttribute of a class (like a method)</strong></p>
+
+<p>The following code mocks the write method of the BytesIO object to be
+a MagicMock. This means when write is called, the mock will be called
+instead, and later it is possible to check what write eas called with.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="o">@</span><span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s">'mulder.pages.blueprint.BytesIO'</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">test_download_u64encode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mbytesio</span><span class="p">):</span>
+
+                <span class="o">.</span>
+                <span class="o">.</span>
+                <span class="o">.</span>
+
+        <span class="n">mwrite</span><span class="o">=</span><span class="n">MagicMock</span><span class="p">()</span>
+        <span class="nb">type</span><span class="p">(</span><span class="n">mbytesio</span><span class="o">.</span><span class="n">return_value</span><span class="p">)</span><span class="o">.</span><span class="n">write</span> <span class="o">=</span> <span class="n">PropertyMock</span><span class="p">(</span><span class="n">return_value</span><span class="o">=</span><span class="n">mwrite</span><span class="p">)</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">test_client</span><span class="p">()</span> <span class="k">as</span> <span class="n">c</span><span class="p">:</span>
+            <span class="n">rv</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'/_download/things.html'</span><span class="p">)</span>
+            <span class="n">mwrite</span><span class="o">.</span><span class="n">assert_called_once_with</span><span class="p">(</span><span class="s">'ok'</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span></code></pre></figure>
+
 <p><strong>pyenv installation problems</strong>
 If you receive the error
 <code class="highlighter-rouge">ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?</code>

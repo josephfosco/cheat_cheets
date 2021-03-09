@@ -81,6 +81,16 @@ When having trouble acessing artifactory (from a make script) An error like
 
 Try stopping the vpn and restarting it.
 
+### To Deploy a library to artifactory
+
+1. Goto artifactory.leapfrogonline.net/
+2. On the left under "Artifactory" select "Artifacts"
+3. In the upper right click "Deploy"
+4. To deploy a Python library, under "Target Repository" select "lfo-pypy"
+5. Select the library to deploy
+6. Click "Deploy" (no need to check any other options)
+
+
 
 ## epi
 **sample curl string:**

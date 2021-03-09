@@ -257,6 +257,17 @@ There is a <code class="highlighter-rouge">Replication</code> section in the out
 
 <p>Try stopping the vpn and restarting it.</p>
 
+<h3 id="to-deploy-a-library-to-artifactory">To Deploy a library to artifactory</h3>
+
+<ol>
+  <li>Goto artifactory.leapfrogonline.net/</li>
+  <li>On the left under “Artifactory” select “Artifacts”</li>
+  <li>In the upper right click “Deploy”</li>
+  <li>To deploy a Python library, under “Target Repository” select “lfo-pypy”</li>
+  <li>Select the library to deploy</li>
+  <li>Click “Deploy” (no need to check any other options)</li>
+</ol>
+
 <h2 id="epi">epi</h2>
 <p><strong>sample curl string:</strong>
 <code class="highlighter-rouge">curl -X POST localhost:9707/v1/valid_zipcode/0.2.0 -H "Content-Type: application/x-www-form-urlencoded" -d api_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</code></p>

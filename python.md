@@ -30,6 +30,28 @@ def test1(self, mobj):
     
 It appears that mobj() indicates ANY instance of the class mobj
 
+**Mocking an atttribute of a class (like a method)**
+
+The following code mocks the write method of the BytesIO object to be
+a MagicMock. This means when write is called, the mock will be called
+instead, and later it is possible to check what write eas called with.
+
+{% highlight python %}
+
+    @mock.patch('mulder.pages.blueprint.BytesIO')
+    def test_download_u64encode(self, mbytesio):
+
+                .
+                .
+                .
+
+        mwrite=MagicMock()
+        type(mbytesio.return_value).write = PropertyMock(return_value=mwrite)
+        with self.app.test_client() as c:
+            rv = c.get('/_download/things.html')
+            mwrite.assert_called_once_with('ok'.encode())
+{% endhighlight %}
+
 **pyenv installation problems**
 If you receive the error
 `ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?`
