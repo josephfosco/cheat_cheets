@@ -19,3 +19,5 @@ defaults:
 markdown: kramdown
 highlighter: rouge
 exclude: ["README.md", Makefile]
+kramdown:
+  hard_wrap: true

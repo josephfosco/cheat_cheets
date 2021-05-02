@@ -176,12 +176,18 @@
 </nav>
 
     <main class="content">
-      <p><strong>f-strings</strong></p>
+      <p><strong>split long strings to multiple lines in code</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>long_string = ("this is a very"
+               "long string")
+               "on three lines in code")
+</code></pre></div></div>
 
-<p><code class="highlighter-rouge">&gt;&gt;&gt; name = "Eric"</code>
-<code class="highlighter-rouge">&gt;&gt;&gt; age = 74</code>
-<code class="highlighter-rouge">&gt;&gt;&gt; f"Hello, {name}. You are {age}."</code>
-<code class="highlighter-rouge">'Hello, Eric. You are 74.'</code></p>
+<p><strong>f-strings</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; name = "Eric"
+&gt;&gt;&gt; age = 74
+&gt;&gt;&gt; f"Hello, {name}. You are {age}."
+'Hello, Eric. You are 74.'
+</code></pre></div></div>
 
 <p><strong>To reload a python file in the shell</strong></p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import importlib
@@ -204,9 +210,9 @@ from inputs import A # or whatever name you want.
 
 <p><strong>Mocking an atttribute of a class (like a method)</strong></p>
 
-<p>The following code mocks the write method of the BytesIO object to be
-a MagicMock. This means when write is called, the mock will be called
-instead, and later it is possible to check what write eas called with.</p>
+<p>The following code mocks the write method of the BytesIO object to be<br />
+a MagicMock. This means when write is called, the mock will be called<br />
+instead, and later it is possible to check what write was called with.</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="o">@</span><span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s">'mulder.pages.blueprint.BytesIO'</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">test_download_u64encode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mbytesio</span><span class="p">):</span>
@@ -221,34 +227,34 @@ instead, and later it is possible to check what write eas called with.</p>
             <span class="n">rv</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'/_download/things.html'</span><span class="p">)</span>
             <span class="n">mwrite</span><span class="o">.</span><span class="n">assert_called_once_with</span><span class="p">(</span><span class="s">'ok'</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span></code></pre></figure>
 
-<p><strong>pyenv installation problems</strong>
-If you receive the error
-<code class="highlighter-rouge">ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?</code>
-try
-<code class="highlighter-rouge">$sudo dnf install compat-openssl10-devel --allowerasing</code>
-then install again. If ths works then return to normal with
+<p><strong>pyenv installation problems</strong><br />
+If you receive the error<br />
+<code class="highlighter-rouge">ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?</code><br />
+try<br />
+<code class="highlighter-rouge">$sudo dnf install compat-openssl10-devel --allowerasing</code><br />
+then install again. If ths works then return to normal with<br />
 <code class="highlighter-rouge">sudo dnf install openssl-devel --allowerasing</code></p>
 
-<p><strong>To run the prometheus exporter for a python.django program</strong>
+<p><strong>To run the prometheus exporter for a python.django program</strong><br />
 <code class="highlighter-rouge">env/bin/honcho start -e .env,.env_local psh_comcast_prometheus</code></p>
 
-<p>This is for psh-comcast<br />
+<p>This is for psh-comcast<br /><br />
 “psh_comcast_prometheus” is an entry in the procfile</p>
 
-<p><strong>List all versions of python available in pyenv</strong>
+<p><strong>List all versions of python available in pyenv</strong><br />
 <code class="highlighter-rouge">pyenv install -l</code></p>
 
-<p><strong>Update list of python versions available to pyenv</strong>
+<p><strong>Update list of python versions available to pyenv</strong><br />
 <code class="highlighter-rouge">pyenv update</code></p>
 
 <p><strong>Python Mocks</strong></p>
 
-<p>Pycon Mock talk<br />
+<p>Pycon Mock talk<br /><br />
 https://www.youtube.com/watch?v=ww1UsGZV8fQ</p>
 
 <p><strong>Do not bufer log messages</strong></p>
 
-<p>Use PYTHONUNBUFFERED=1 as in<br />
+<p>Use PYTHONUNBUFFERED=1 as in<br /><br />
 <code class="highlighter-rouge">PYTHONUNBUFFERED=1 make start</code></p>
 
 

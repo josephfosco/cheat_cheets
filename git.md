@@ -25,7 +25,7 @@ To remove a single stashed entry
 
 ***After cloning a repo with submodules run the following commands***
 `git submodule init`
-`git submodule update`
+`git submodule update  - pull submodules down to the project`
 
 ***To update all submodules in a repo to their master branch run***
 `git submodule update --remote`

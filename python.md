@@ -1,12 +1,20 @@
 ---
 ---
 
-**f-strings**
+**split long strings to multiple lines in code**
+```
+long_string = ("this is a very"
+               "long string")
+               "on three lines in code")
+```               
 
-`>>> name = "Eric"`
-`>>> age = 74`
-`>>> f"Hello, {name}. You are {age}."`
-`'Hello, Eric. You are 74.'`
+**f-strings**
+```
+>>> name = "Eric"
+>>> age = 74
+>>> f"Hello, {name}. You are {age}."
+'Hello, Eric. You are 74.'
+```
 
 **To reload a python file in the shell**
 ```
@@ -34,7 +42,7 @@ It appears that mobj() indicates ANY instance of the class mobj
 
 The following code mocks the write method of the BytesIO object to be
 a MagicMock. This means when write is called, the mock will be called
-instead, and later it is possible to check what write eas called with.
+instead, and later it is possible to check what write was called with.
 
 {% highlight python %}
 

@@ -176,9 +176,15 @@
 </nav>
 
     <main class="content">
-      <p><strong>ls sorted by date/time</strong></p>
+      <p><strong>Starting ssh on Fedora</strong></p>
 
-<p>use -t flag eg: 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl start sshd.service
+systemctl enable sshd.service
+</code></pre></div></div>
+
+<p><strong>ls sorted by date/time</strong></p>
+
+<p>use -t flag eg: <br />
 <code class="highlighter-rouge">ls -lt</code></p>
 
 <p><strong>To tar and gzip a directory</strong></p>
@@ -202,7 +208,7 @@
 
 <p><code class="highlighter-rouge">nmcli c</code></p>
 
-<p>This will list your connections, with the first column being the SSID, and the second column being the UUID of the connection.
+<p>This will list your connections, with the first column being the SSID, and the second column being the UUID of the connection.<br />
 Copy the UUID of the SSID you want to connect to so you can paste it into the next command.</p>
 
 <p>Next, run</p>
@@ -211,7 +217,7 @@ Copy the UUID of the SSID you want to connect to so you can paste it into the ne
 
 <p><strong>To flush DNS cache</strong></p>
 
-<p>Nothing to do on Fedora. There is no DNS cache system by default.
+<p>Nothing to do on Fedora. There is no DNS cache system by default.<br />
 It might be necessary to clear the browser cache</p>
 
 

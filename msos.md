@@ -1,10 +1,44 @@
 ---
 ---
 
+# AuthDealer dealer ID
+
+- 1178
+- 1848
+
+# Test Addresses
+
+**COMCAST**
+
+- 5312 clover dr  60532  - works in qa
+- 500 FALLING WATERS DR E 60527
+
+To submit an order with patment info using SPILL token
+
+- On User Info page
+  First Name: LFO\<token\>      
+  Last Name: Test  
+  SSN: 666-11-1111  
+  
+- On Payment Info page
+  First Name: Visa\<token\>  
+  Last Name: Test  
+  CC No: 4111111111111111  
+  CSV: 123  
+  Exp Date: 02 2022  
+
+**COX**
+
+- 3901 NORTHSIDE DR 7C 31210
+- 4044 Maricopa, 85009
+- 1426 Saint Bernard Ave 70116
+- 1215 31st St. 92102
+- 1504 Coulee Kinney Rd. Apt 101 70510
+
 # Get Contacts
 `hubot show contacts for <mso e.g. cox or whoever>`
 
-# COMCAST
+*COMCAST*
 
 **Contacts**
 
@@ -13,12 +47,3 @@ dwarkesh_marakna@comcast.com - vpn
 thomas\_miller3@comcast.com - technical contact (contractor)  
 jesse\_otto@comcast.com - project manager  
 
-**Test Addresses**
-
-5312 clover dr  60532  - works in qa
-
-500 FALLING WATERS DR E 60527
-
-# COX
-
-3901 NORTHSIDE DR 7C 31210

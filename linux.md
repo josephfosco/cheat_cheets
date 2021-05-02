@@ -1,6 +1,13 @@
 ---
 ---
 
+**Starting ssh on Fedora**
+
+```
+systemctl start sshd.service
+systemctl enable sshd.service
+```
+
 **ls sorted by date/time**
 
 use -t flag eg: 

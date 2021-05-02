@@ -1,12 +1,17 @@
 ---
 ---
 
-**AuthDealer dealer ID**
+**Update g2b certs**
 
-1848
+Aaron Urasky
+    hey, all. i pulled in a ticket to update some g2b certs as i'm the contact person to retrieve them, going to be testing on qa shortly. but one set of commands that helped convert the client pfx cert to the pem/key we use, was:
 
-**Cox Test Address**
-- 4044 Maricopa, 85009
-- 1426 Saint Bernard Ave 70116
-- 1215 31st St. 92102
-- 1504 Coulee Kinney Rd. Apt 101 70510
+```
+openssl pkcs12 -in g2b_qa_pkcs.pfx -nocerts -out g2b_qa.key
+openssl pkcs12 -in g2b_qa_pkcs.pfx -clcerts -nokeys -out g2b_qa.pem
+openssl rsa -in g2b_qa.key -out g2b_qa.key
+```
+
+just if anyone is ever in that situation. see also <https://github.com/iprospect-usa/ansible/pull/645>
+
+stolen from: <https://www.xolphin.com/support/Certificate_conversions/Convert_pfx_file_to_pem_file>
