@@ -194,6 +194,26 @@ I believe it loads up the <code class="highlighter-rouge">bundle exec rails cons
 so once you are on the server you’d do <code class="highlighter-rouge">sudo -u deploy bash /var/deploy/src/infosphere/current/console_quickstart.sh</code><br />
 and then the interaction is the same as it would be if you were local doing <code class="highlighter-rouge">bundle exec rails console</code></p>
 
+<h2 id="to-check-if-vpn-tunnel-is-up-to-clients">To check if VPN tunnel is up to Clients</h2>
+
+<p>These commands must be performed on the relevant server</p>
+
+<h3 id="comcast">Comcast</h3>
+<p><code class="highlighter-rouge">nc -z -v -w 1 proxyweb.comcast.com 443</code></p>
+
+<h3 id="nrg">NRG</h3>
+
+<p><strong>To get NRG api from Google</strong><br />
+<code class="highlighter-rouge">dig @8.8.8.8 api.nrg.com +short</code><br />
+should return 158.81.201.189<br />
+<strong>To get ip for nrg from loacl dns</strong><br />
+<code class="highlighter-rouge">dig nrg.api.com +short</code></p>
+
+<p><strong>To check connectivity with result returned from Google</strong><br />
+<code class="highlighter-rouge">nc -z -v -w 1 $(dig @8.8.8.8 api.nrg.com +short) 443</code><br />
+<strong>To check connectivity from local erver</strong><br />
+<code class="highlighter-rouge">nc -z -v -w 1 api.nrg.com 443</code></p>
+
 <h2 id="redis">Redis</h2>
 
 <p><strong>To delete multiple keys based on a wildcard</strong></p>

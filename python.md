@@ -8,20 +8,28 @@ long_string = ("this is a very"
                "on three lines in code")
 ```               
 
-**f-strings**
-```
->>> name = "Eric"
->>> age = 74
->>> f"Hello, {name}. You are {age}."
-'Hello, Eric. You are 74.'
-```
-
 **To reload a python file in the shell**
 ```
 import importlib
 import <module name> #import the module here, so that it can be reloaded.
 importlib.reload(<module name>)
 from inputs import A # or whatever name you want.
+```
+
+**To build a python library**
+```
+python3 -m pip install --upgrade build
+python3 -m build
+```
+
+The final library file will be in the '**dist**' directory
+
+**f-strings**
+```
+>>> name = "Eric"
+>>> age = 74
+>>> f"Hello, {name}. You are {age}."
+'Hello, Eric. You are 74.'
 ```
 
 **Mocking a method on an instance of a class**

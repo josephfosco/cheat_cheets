@@ -19,6 +19,28 @@ so once you are on the server you'd do `sudo -u deploy bash /var/deploy/src/info
 and then the interaction is the same as it would be if you were local doing `bundle exec rails console`
 
 
+## To check if VPN tunnel is up to Clients ##
+
+These commands must be performed on the relevant server
+
+### Comcast ###
+`nc -z -v -w 1 proxyweb.comcast.com 443`
+
+### NRG ###
+
+**To get NRG api from Google**
+`dig @8.8.8.8 api.nrg.com +short`
+should return 158.81.201.189
+**To get ip for nrg from loacl dns**
+`dig nrg.api.com +short`
+
+**To check connectivity with result returned from Google**
+`nc -z -v -w 1 $(dig @8.8.8.8 api.nrg.com +short) 443`
+**To check connectivity from local erver**
+`nc -z -v -w 1 api.nrg.com 443`
+
+
+
 
 ## Redis
 

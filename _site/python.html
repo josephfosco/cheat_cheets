@@ -182,18 +182,25 @@
                "on three lines in code")
 </code></pre></div></div>
 
-<p><strong>f-strings</strong></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; name = "Eric"
-&gt;&gt;&gt; age = 74
-&gt;&gt;&gt; f"Hello, {name}. You are {age}."
-'Hello, Eric. You are 74.'
-</code></pre></div></div>
-
 <p><strong>To reload a python file in the shell</strong></p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import importlib
 import &lt;module name&gt; #import the module here, so that it can be reloaded.
 importlib.reload(&lt;module name&gt;)
 from inputs import A # or whatever name you want.
+</code></pre></div></div>
+
+<p><strong>To build a python library</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 -m pip install --upgrade build
+python3 -m build
+</code></pre></div></div>
+
+<p>The final library file will be in the ‘<strong>dist</strong>’ directory</p>
+
+<p><strong>f-strings</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; name = "Eric"
+&gt;&gt;&gt; age = 74
+&gt;&gt;&gt; f"Hello, {name}. You are {age}."
+'Hello, Eric. You are 74.'
 </code></pre></div></div>
 
 <p><strong>Mocking a method on an instance of a class</strong></p>
