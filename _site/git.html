@@ -176,7 +176,19 @@
 </nav>
 
     <main class="content">
-      <p><strong>Stash</strong></p>
+      <p><strong>Deleting branches</strong></p>
+
+<p>To delete a <strong>REMOTE</strong> branch<br />
+<code class="highlighter-rouge">git push &lt;remote_name&gt; :&lt;branch_name&gt;</code><br />
+or (more recently<br />
+<code class="highlighter-rouge">git push &lt;remote_name&gt; --delete &lt;branch_name&gt;</code></p>
+
+<p>To delete a <strong>LOCAL</strong> branch<br />
+<code class="highlighter-rouge">git branch -d &lt;branch_name&gt;</code><br />
+or to force<br />
+<code class="highlighter-rouge">git branch -D &lt;branch_name&gt;</code></p>
+
+<p><strong>Stash</strong></p>
 
 <p>To stash current uncommitted changes<br />
 <code class="highlighter-rouge">git stash</code></p>

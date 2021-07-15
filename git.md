@@ -1,6 +1,18 @@
 ---
 ---
 
+**Deleting branches**
+
+To delete a **REMOTE** branch
+`git push <remote_name> :<branch_name>`
+or (more recently
+`git push <remote_name> --delete <branch_name>`
+
+To delete a **LOCAL** branch
+`git branch -d <branch_name>`
+or to force
+`git branch -D <branch_name>`
+
 **Stash**
 
 To stash current uncommitted changes
