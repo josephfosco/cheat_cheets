@@ -189,6 +189,21 @@ importlib.reload(&lt;module name&gt;)
 from inputs import A # or whatever name you want.
 </code></pre></div></div>
 
+<p><strong>To run tests from one test file</strong><br />
+tk</p>
+
+<p><strong>To use a local version of a library</strong><br />
+just put the path to the local library in the requirements file  <br />
+like celeryutil here (after the comment):</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>botocore==1.18.18
+boto3&gt;=1.15.0,&lt;1.16
+# celeryutil==5.2.0
+../celeryutil/dist/celeryutil-6.0.0.tar.gz
+cffi==1.14.5
+charon==4.0.0
+click&gt;=7.1.2,&lt;8.0.0
+</code></pre></div></div>
+
 <p><strong>To build a python library</strong></p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 -m pip install --upgrade build
 python3 -m build
@@ -234,6 +249,11 @@ instead, and later it is possible to check what write was called with.</p>
             <span class="n">rv</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'/_download/things.html'</span><span class="p">)</span>
             <span class="n">mwrite</span><span class="o">.</span><span class="n">assert_called_once_with</span><span class="p">(</span><span class="s">'ok'</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span></code></pre></figure>
 
+<p><strong>Python Mocks</strong></p>
+
+<p>Pycon Mock talk<br /><br />
+https://www.youtube.com/watch?v=ww1UsGZV8fQ</p>
+
 <p><strong>pyenv installation problems</strong><br />
 If you receive the error<br />
 <code class="highlighter-rouge">ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?</code><br />
@@ -253,11 +273,6 @@ then install again. If ths works then return to normal with<br />
 
 <p><strong>Update list of python versions available to pyenv</strong><br />
 <code class="highlighter-rouge">pyenv update</code></p>
-
-<p><strong>Python Mocks</strong></p>
-
-<p>Pycon Mock talk<br /><br />
-https://www.youtube.com/watch?v=ww1UsGZV8fQ</p>
 
 <p><strong>Do not bufer log messages</strong></p>
 

@@ -328,8 +328,23 @@ consul hashi config postgres_password</p>
 <code class="highlighter-rouge">bundle exec foreman run -e .env,.env_local lfo-prometheus-exporter --name phoenix</code></p>
 
 <h2 id="consul">Consul</h2>
-<p>To get the consul ACL master Token look at:<br />
-<code class="highlighter-rouge">https://gh.leapfrogonline.net/efisher/ansible-repo/blob/f94eb4d25153f54a0f0db2638407f1e122d57963/inventory/group_vars/consul/consul_vars.yml#L14</code></p>
+<p>To get the consul ACL master Token look in aws dashboasrd:</p>
+
+<h2 id="cron-jobs-deployed-on-servers">Cron Jobs deployed on servers</h2>
+<p>To see what cron jobs are deployed on servers use the command:<br />
+<code class="highlighter-rouge">ls /etc/cron.d_deployed/</code></p>
+
+<p>To check cron messages use:<br />
+<code class="highlighter-rouge">less /var/log/cron</code></p>
+
+<p>To remove cron jobs from a server <br />
+execute the following command on the server(s) where the cron(s) run<br />
+<code class="highlighter-rouge">sudo /usr/bin/cron_config_remove &lt;remote_name&gt;</code><br />
+remote name is the app name + the role from catallina.yml <br />
+So for psh-cox on the tolls server it would be psh-cox_tools</p>
+
+<p>The catalina command that does this is in the catalina repo at<br />
+<code class="highlighter-rouge">https://github.com/gdo-media-usa/catalina-cron/blob/main/cron.rb#L63</code></p>
 
       <div class="content__nav">
       </div>

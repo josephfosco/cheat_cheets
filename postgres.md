@@ -2,7 +2,7 @@
 ---
 
 **T0 login to postgres commandline**
-`sudo su psql –U postgres`
+`sudo psql –U postgres`
 
 This logs you in as the postgres user
 
@@ -15,5 +15,12 @@ while logged in as postgres user
 
 **To see all database tables (locally)**
 `\dt`
+
+**To connect to a database on a server**
+Get the connection string from the app from consul  
+It will look something like   
+`postgresql://<username>:<password>@rdsqadb1-primary.cluster-c6ymrjidvw9w.us-east-2.rds.amazonaws.com:<port>/<db>`
+format to the following command  
+`psql -h rdsqadb1-primary.cluster-c6ymrjidvw9w.us-east-2.rds.amazonaws.com -p <port> -U <username> -d <db>` 
 
 

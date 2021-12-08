@@ -20,11 +20,8 @@ use -t flag eg:
 Where,
 
     -z : Compress archive using gzip program in Linux or Unix
-    
     -c : Create archive on Linux
-    
     -v : Verbose i.e display progress while creating archive
-    
     -f : Archive File name
 
 **To connect to a wireless network from the command line**

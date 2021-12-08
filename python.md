@@ -16,6 +16,22 @@ importlib.reload(<module name>)
 from inputs import A # or whatever name you want.
 ```
 
+**To run tests from one test file**
+tk
+
+**To use a local version of a library**
+just put the path to the local library in the requirements file  
+like celeryutil here (after the comment):
+```
+botocore==1.18.18
+boto3>=1.15.0,<1.16
+# celeryutil==5.2.0
+../celeryutil/dist/celeryutil-6.0.0.tar.gz
+cffi==1.14.5
+charon==4.0.0
+click>=7.1.2,<8.0.0
+```
+
 **To build a python library**
 ```
 python3 -m pip install --upgrade build
@@ -68,6 +84,11 @@ instead, and later it is possible to check what write was called with.
             mwrite.assert_called_once_with('ok'.encode())
 {% endhighlight %}
 
+**Python Mocks**
+
+Pycon Mock talk<br>
+https://www.youtube.com/watch?v=ww1UsGZV8fQ
+
 **pyenv installation problems**
 If you receive the error
 `ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?`
@@ -87,11 +108,6 @@ This is for psh-comcast<br>
 
 **Update list of python versions available to pyenv**
 `pyenv update`
-
-**Python Mocks**
-
-Pycon Mock talk<br>
-https://www.youtube.com/watch?v=ww1UsGZV8fQ
 
 **Do not bufer log messages**
 
