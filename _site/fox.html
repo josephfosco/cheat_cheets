@@ -186,19 +186,13 @@
 </nav>
 
     <main class="content">
-      <p><strong>Update g2b certs</strong></p>
+      <p>hey, for the record, assets were broken in qa fox for mobile.store.cox.com. in addition to pulling back the fox db back from production to qa (bottom of https://github.com/gdo-media-usa/phoenix/tree/main/docs/deployment_checklists), i had to run the following manually in a phoenix shell on the server:</p>
 
-<p>Aaron Urasky<br />
-    hey, all. i pulled in a ticket to update some g2b certs as i’m the contact person to retrieve them, going to be testing on qa shortly. but one set of commands that helped convert the client pfx cert to the pem/key we use, was:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl pkcs12 -in g2b_qa_pkcs.pfx -nocerts -out g2b_qa.key
-openssl pkcs12 -in g2b_qa_pkcs.pfx -clcerts -nokeys -out g2b_qa.pem
-openssl rsa -in g2b_qa.key -out g2b_qa.key
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>site = Site.where(domain: "mobile.store.cox.com").first
+cinval = Caching::Invalidation.new(nil)
+pages = site.pages.active_for_change_set(nil)
+pages.each { |page| cinval.invalidate_page(page) }
 </code></pre></div></div>
-
-<p>just if anyone is ever in that situation. see also <a href="https://github.com/iprospect-usa/ansible/pull/645">https://github.com/iprospect-usa/ansible/pull/645</a></p>
-
-<p>stolen from: <a href="https://www.xolphin.com/support/Certificate_conversions/Convert_pfx_file_to_pem_file">https://www.xolphin.com/support/Certificate_conversions/Convert_pfx_file_to_pem_file</a></p>
 
       <div class="content__nav">
       </div>

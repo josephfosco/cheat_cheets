@@ -17,7 +17,12 @@ from inputs import A # or whatever name you want.
 ```
 
 **To run tests from one test file**
-tk
+
+In  psh-comcast change the test command in Makefile to:   
+`$(HONCHO) run -e .env.test $(COVERAGE) run $(COVERAGE_OPTS) -m unittest discover comcast -k <part_of_test_module_name>`
+where `<part_of_test_module_name>` is any unique part of the filename of the test module you wish to test  
+To test the module test_modular_offers.py you could write  
+`-k modular`
 
 **To use a local version of a library**
 just put the path to the local library in the requirements file  

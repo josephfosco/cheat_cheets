@@ -60,6 +60,10 @@
    
   
 
+   
+   
+  
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -96,6 +100,12 @@
         <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./emacs.html">
             emacs
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./fox.html">
+            fox
           </a>
         </li>
       
@@ -189,8 +199,13 @@ importlib.reload(&lt;module name&gt;)
 from inputs import A # or whatever name you want.
 </code></pre></div></div>
 
-<p><strong>To run tests from one test file</strong><br />
-tk</p>
+<p><strong>To run tests from one test file</strong></p>
+
+<p>In  psh-comcast change the test command in Makefile to:   <br />
+<code class="highlighter-rouge">$(HONCHO) run -e .env.test $(COVERAGE) run $(COVERAGE_OPTS) -m unittest discover comcast -k &lt;part_of_test_module_name&gt;</code><br />
+where <code class="highlighter-rouge">&lt;part_of_test_module_name&gt;</code> is any unique part of the filename of the test module you wish to test  <br />
+To test the module test_modular_offers.py you could write  <br />
+<code class="highlighter-rouge">-k modular</code></p>
 
 <p><strong>To use a local version of a library</strong><br />
 just put the path to the local library in the requirements file  <br />

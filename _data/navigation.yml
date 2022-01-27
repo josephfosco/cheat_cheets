@@ -4,6 +4,9 @@
 - text: emacs
   url: /emacs.html
   available: true
+- text: fox
+  url: /fox.html
+  available: true
 - text: git
   url: /git.html
   available: true
