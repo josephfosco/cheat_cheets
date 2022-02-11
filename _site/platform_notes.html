@@ -211,18 +211,10 @@ and then the interaction is the same as it would be if you were local doing <cod
 <h3 id="comcast">Comcast</h3>
 <p><code class="highlighter-rouge">nc -z -v -w 1 proxyweb.comcast.com 443</code></p>
 
-<h3 id="nrg">NRG</h3>
+<h2 id="removing-timercron-jobs-from-server-in-the-catalinayaml">Removing timer/cron jobs from server in the catalina.yaml</h2>
 
-<p><strong>To get NRG api from Google</strong><br />
-<code class="highlighter-rouge">dig @8.8.8.8 api.nrg.com +short</code><br />
-should return 158.81.201.189<br />
-<strong>To get ip for nrg from loacl dns</strong><br />
-<code class="highlighter-rouge">dig nrg.api.com +short</code></p>
-
-<p><strong>To check connectivity with result returned from Google</strong><br />
-<code class="highlighter-rouge">nc -z -v -w 1 $(dig @8.8.8.8 api.nrg.com +short) 443</code><br />
-<strong>To check connectivity from local erver</strong><br />
-<code class="highlighter-rouge">nc -z -v -w 1 api.nrg.com 443</code></p>
+<p>In the run: section of the timer/cron you ar removing, replace the command with the word RETIRE<br />
+<code class="highlighter-rouge">https://github.com/gdo-media-usa/catalina-daemons/blob/3b05a60637174c0c2ffe0d46f986020625041b6d/README.md</code></p>
 
 <h2 id="redis">Redis</h2>
 

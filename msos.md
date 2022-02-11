@@ -30,10 +30,10 @@ To submit an order with patment info using SPILL token
 **COX**
 
 - 3901 NORTHSIDE DR 7C 31210
-- 4044 Maricopa, 85009
+- 4044 Maricopa 85009
 - 1426 Saint Bernard Ave 70116
-- 1215 31st St. 92102
-- 1504 Coulee Kinney Rd. Apt 101 70510
+- 1215 31st St 92102
+- 1504 Coulee Kinney Rd Apt 101 70510
 
 # Get Contacts
 `hubot show contacts for <mso e.g. cox or whoever>`

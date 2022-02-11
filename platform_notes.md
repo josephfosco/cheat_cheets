@@ -26,21 +26,10 @@ These commands must be performed on the relevant server
 ### Comcast ###
 `nc -z -v -w 1 proxyweb.comcast.com 443`
 
-### NRG ###
+## Removing timer/cron jobs from server in the catalina.yaml
 
-**To get NRG api from Google**
-`dig @8.8.8.8 api.nrg.com +short`
-should return 158.81.201.189
-**To get ip for nrg from loacl dns**
-`dig nrg.api.com +short`
-
-**To check connectivity with result returned from Google**
-`nc -z -v -w 1 $(dig @8.8.8.8 api.nrg.com +short) 443`
-**To check connectivity from local erver**
-`nc -z -v -w 1 api.nrg.com 443`
-
-
-
+In the run: section of the timer/cron you ar removing, replace the command with the word RETIRE
+`https://github.com/gdo-media-usa/catalina-daemons/blob/3b05a60637174c0c2ffe0d46f986020625041b6d/README.md`
 
 ## Redis
 
