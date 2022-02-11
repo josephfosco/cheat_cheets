@@ -24,6 +24,10 @@ Where,
     -v : Verbose i.e display progress while creating archive
     -f : Archive File name
 
+**To remove ssh key(s) from ssh-agent**
+
+`ssh-add -D` removes all keys
+
 **To connect to a wireless network from the command line**
 
 First, run
