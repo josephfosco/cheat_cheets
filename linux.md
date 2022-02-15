@@ -24,6 +24,12 @@ Where,
     -v : Verbose i.e display progress while creating archive
     -f : Archive File name
 
+**To add additional ssh keys to ssh-agent**
+
+To add an arbitrary private key, give the path of the key file as an argument to ssh-add. For example,
+`ssh-add ~/.ssh/jf_github`
+would add the file ~/.ssh/jf_github
+
 **To remove ssh key(s) from ssh-agent**
 
 `ssh-add -D` removes all keys

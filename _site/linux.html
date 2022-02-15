@@ -209,6 +209,12 @@ systemctl enable sshd.service
 -f : Archive File name
 </code></pre></div></div>
 
+<p><strong>To add additional ssh keys to ssh-agent</strong></p>
+
+<p>To add an arbitrary private key, give the path of the key file as an argument to ssh-add. For example,<br />
+<code class="highlighter-rouge">ssh-add ~/.ssh/jf_github</code><br />
+would add the file ~/.ssh/jf_github</p>
+
 <p><strong>To remove ssh key(s) from ssh-agent</strong></p>
 
 <p><code class="highlighter-rouge">ssh-add -D</code> removes all keys</p>
