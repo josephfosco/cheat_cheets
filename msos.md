@@ -13,7 +13,16 @@
 - 5312 clover dr  60532  - works in qa
 - 500 FALLING WATERS DR E 60527
 
-To submit an order with patment info using SPILL token
+**Commercial Address no b2b permission**
+
+Dealer Location Id
+6933
+
+Address
+218 NW 8TH ST  33136
+
+
+***To submit an order with patment info using SPILL token***
 
 - On User Info page
   First Name: LFO\<token\>      
