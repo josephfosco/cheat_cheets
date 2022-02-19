@@ -240,8 +240,35 @@ or to force<br />
 
 # or, if you want to leave it in your working tree and have done step 0
 3.   git rm --cached a/submodule
-3bis mv a/submodule_tmp a/submodule
+     mv a/submodule_tmp a/submodule
 </code></pre></div></div>
+
+<p><strong><em>To create a new github repo from an existing local repo</em></strong></p>
+
+<ol>
+  <li>Log in to github and go to the “Repositories” page</li>
+  <li>Click “New”, fill in the required information, and then click “Create Repository”</li>
+  <li>On the local computer cd to the directory you want to make a git repo</li>
+  <li>Type <code class="highlighter-rouge">git init</code></li>
+  <li>Set the git username and email address
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config  user.name "&lt;username&gt;"
+git config  user.email "&lt;email address&gt;"
+</code></pre></div>    </div>
+    <p>Note: This sets the username and email for the local repository only</p>
+  </li>
+  <li>Add the remote using the following format<br />
+<code class="highlighter-rouge">git remote add origin git@&lt;github username&gt;.github.com:&lt;github username&gt;/&lt;github repo name&gt;.git</code><br />
+Note: This is not generally the exact uri you get from the “Code” dropdown in github.<br />
+This has the additional occurance of &lt;github username&gt; after the “@”</li>
+  <li>Type <code class="highlighter-rouge">git pull origin main</code><br />
+Note: this must be done before making any commits to the local repo</li>
+  <li>Add and push first commit<code class="highlighter-rouge">
+git add .
+git commit -m"Initial commit"
+git push --set-upstream origin main
+</code></li>
+</ol>
+
 
       <div class="content__nav">
       </div>
@@ -294,7 +321,7 @@ or to force<br />
         </ul>
       </div>
     </div>
-    <p class="footer__line footer__line--last">Copyright 2019 Joseph Fosco </p>
+    <p class="footer__line footer__line--last">Copyright 2019-2022 Joseph Fosco </p>
   </div>
 </footer>
 

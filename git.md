@@ -56,5 +56,30 @@ The 3-step removal process is:
 
 # or, if you want to leave it in your working tree and have done step 0
 3.   git rm --cached a/submodule
-3bis mv a/submodule_tmp a/submodule
+     mv a/submodule_tmp a/submodule
 ```
+
+***To create a new github repo from an existing local repo***
+
+1. Log in to github and go to the "Repositories" page
+2. Click "New", fill in the required information, and then click "Create Repository"
+3. On the local computer cd to the directory you want to make a git repo
+4. Type `git init`
+5. Set the git username and email address
+```
+git config  user.name "<username>"
+git config  user.email "<email address>"
+```
+Note: This sets the username and email for the local repository only
+6. Add the remote using the following format
+`git remote add origin git@<github username>.github.com:<github username>/<github repo name>.git`
+Note: This is not generally the exact uri you get from the "Code" dropdown in github.
+This has the additional occurance of \<github username\> after the "@"
+7. Type `git pull origin main`
+Note: this must be done before making any commits to the local repo
+8. Add and push first commit```
+git add .
+git commit -m"Initial commit"
+git push --set-upstream origin main
+```
+
