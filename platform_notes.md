@@ -143,6 +143,21 @@ consul hashi config postgres\_password
 `export PROMETHEUS_EXPORTER_PORT=9932`
 `bundle exec foreman run -e .env,.env_local lfo-prometheus-exporter --name phoenix`
 
+**prometheus_scrape_slow error**
+
+This can often occur when the prometheus_dbs directory gets too many files and it takes a long time to for prometheus to scrape the directory.   
+
+Deploying the app (or redeploying the app) will create a new prometheus directory and solve the problem.  
+
+If you are concerned about redeploying an app when it has not been deployed in awhile, you can delete the files in the prometheus_dbs directory to clear up the issue.  
+
+It is safest to stop the daemons before deleting the files, but if you do not want to stop the daemons (esp for something like hashi) you should be ready to restart the workers and make sure they are running correctly after restarting (all workers connected to rabbitmq and no sentry errors).  
+
+If you delete the contents of the prometheus directory, you should check the directory after deleting to make certain prometheus is once again writing to the directory.  
+
+If prometheus is not writing stats (no new files in the directory) you should restart the daemons and check that prometheus is writing to the prometheus_dbs directory and there are no errors.  
+
+
 ## Consul
 To get the consul ACL master Token look in aws dashboasrd:
 
