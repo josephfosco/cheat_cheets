@@ -72,7 +72,7 @@ git config  user.email "<email address>"
 ```
 Note: This sets the username and email for the local repository only
 6. Add the remote using the following format
-`git remote add origin git@<github username>.github.com:<github username>/<github repo name>.git`
+`git remote add origin git@<github username>/<github repo name>.git`
 Note: This is not generally the exact uri you get from the "Code" dropdown in github.
 This has the additional occurance of \<github username\> after the "@"
 7. Type `git pull origin main`
