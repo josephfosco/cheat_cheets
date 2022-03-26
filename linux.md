@@ -13,6 +13,10 @@ systemctl enable sshd.service
 There is no root user record in Fedora - use the following command
 `sudo su -`
 
+***T clear/reset a failed service**
+
+`systemctl reset-failed <service name>`
+
 **ls sorted by date/time**
 
 use -t flag eg: 
