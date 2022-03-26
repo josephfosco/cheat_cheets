@@ -8,6 +8,11 @@ systemctl start sshd.service
 systemctl enable sshd.service
 ```
 
+**To become 'root' user in Fedora Linux**
+
+There is no root user record in Fedora - use the following command
+`sudo su -`
+
 **ls sorted by date/time**
 
 use -t flag eg: 

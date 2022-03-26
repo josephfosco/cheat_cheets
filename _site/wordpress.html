@@ -186,16 +186,23 @@
 </nav>
 
     <main class="content">
-      <p><strong>To see local wordpress sites on another computer on the local network</strong></p>
+      <p><strong>To see local wordpress sites from another computer (server) on a local machine</strong></p>
 <ul>
-  <li>In wordpress Settings-&gt;General, both Wordpress Address and Site Address should point to the ip of the hosting computer<br />
-these correspond to “siteurl” and “home” in the mysql db options table. The url will look something like:<br />
-<code class="highlighter-rouge">http://192.168.1.17/~joseph/spark</code> <br />
-instead of<br />
-<code class="highlighter-rouge">httpd:localhost/~joseph/spark</code></li>
-  <li>Fedora has a firewall running by default that wil block access to port 80. To disable it, run:<br />
-<code class="highlighter-rouge">sudo systemctl stop firewalld</code></li>
+  <li>In wordpress Settings-&gt;General, both Wordpress Address and Site Address should point to the ip of the hosting computer
+these correspond to “siteurl” and “home” in the mysql db options table. The url will look something like:
+<code class="language-plaintext highlighter-rouge">http://192.168.1.17/~joseph/spark</code> 
+instead of
+<code class="language-plaintext highlighter-rouge">httpd:localhost/~joseph/spark</code></li>
+  <li>Fedora has a firewall running by default that wil block access to port 80. To disable it, run:
+<code class="language-plaintext highlighter-rouge">sudo systemctl stop firewalld</code></li>
 </ul>
+
+<p><strong>PHP</strong></p>
+
+<p>To use phpMyAdmin locally, in the web browser go to
+<code class="language-plaintext highlighter-rouge">localhost/phpmyadmin/</code></p>
+
+<p>Default userid: root / password: password</p>
 
 
       <div class="content__nav">

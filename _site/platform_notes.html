@@ -189,7 +189,7 @@
       <h2 id="creating-a-shell-with-environment-vars-from-consul">Creating a Shell with environment vars from Consul</h2>
 <h3 id="python">PYTHON</h3>
 
-<p><code class="highlighter-rouge">sudo -u deploy -i
+<p><code class="language-plaintext highlighter-rouge">sudo -u deploy -i
 cd src/newman/current/
 source &lt;(/etc/apps/config/deploy/render_config newman)
 env/bin/python manage.py shell</code></p>
@@ -198,68 +198,68 @@ env/bin/python manage.py shell</code></p>
 
 <h3 id="ruby-">RUBY ***</h3>
 
-<p>for infosphere<br />
-there’s a script on there called <code class="highlighter-rouge">console_quickstart</code><br />
-I believe it loads up the <code class="highlighter-rouge">bundle exec rails console</code> with some extra vars like the consul config (<em>I think</em> on this latter part)<br />
-so once you are on the server you’d do <code class="highlighter-rouge">sudo -u deploy bash /var/deploy/src/infosphere/current/console_quickstart.sh</code><br />
-and then the interaction is the same as it would be if you were local doing <code class="highlighter-rouge">bundle exec rails console</code></p>
+<p>for infosphere
+there’s a script on there called <code class="language-plaintext highlighter-rouge">console_quickstart</code>
+I believe it loads up the <code class="language-plaintext highlighter-rouge">bundle exec rails console</code> with some extra vars like the consul config (<em>I think</em> on this latter part)
+so once you are on the server you’d do <code class="language-plaintext highlighter-rouge">sudo -u deploy bash /var/deploy/src/infosphere/current/console_quickstart.sh</code>
+and then the interaction is the same as it would be if you were local doing <code class="language-plaintext highlighter-rouge">bundle exec rails console</code></p>
 
 <h2 id="to-check-if-vpn-tunnel-is-up-to-clients">To check if VPN tunnel is up to Clients</h2>
 
 <p>These commands must be performed on the relevant server</p>
 
 <h3 id="comcast">Comcast</h3>
-<p><code class="highlighter-rouge">nc -z -v -w 1 proxyweb.comcast.com 443</code></p>
+<p><code class="language-plaintext highlighter-rouge">nc -z -v -w 1 proxyweb.comcast.com 443</code></p>
 
 <h2 id="removing-timercron-jobs-from-server-in-the-catalinayaml">Removing timer/cron jobs from server in the catalina.yaml</h2>
 
-<p>In the run: section of the timer/cron you ar removing, replace the command with the word RETIRE<br />
-<code class="highlighter-rouge">https://github.com/gdo-media-usa/catalina-daemons/blob/3b05a60637174c0c2ffe0d46f986020625041b6d/README.md</code></p>
+<p>In the run: section of the timer/cron you ar removing, replace the command with the word RETIRE
+<code class="language-plaintext highlighter-rouge">https://github.com/gdo-media-usa/catalina-daemons/blob/3b05a60637174c0c2ffe0d46f986020625041b6d/README.md</code></p>
 
 <h2 id="redis">Redis</h2>
 
 <p><strong>To delete multiple keys based on a wildcard</strong></p>
 
-<p>In the shell type something like (to delete all keys that start with “humana:*”)<br />
-<code class="highlighter-rouge">redis-cli KEYS "humana:*" | xargs redis-cli del</code></p>
+<p>In the shell type something like (to delete all keys that start with “humana:*”)
+<code class="language-plaintext highlighter-rouge">redis-cli KEYS "humana:*" | xargs redis-cli del</code></p>
 
 <p><strong>To delete items from the redis registry</strong></p>
 
-<p>access the redis host<br />
-<code class="highlighter-rouge">$ redis-cli -h &lt;redis host&gt; (something like redis-primary.qa.ause2)</code></p>
+<p>access the redis host
+<code class="language-plaintext highlighter-rouge">$ redis-cli -h &lt;redis host&gt; (something like redis-primary.qa.ause2)</code></p>
 
-<p>to see if the entry you want to delete exists<br />
-<code class="highlighter-rouge">$ hget psh-registry-qa &lt;service&gt;::&lt;version&gt; (something like adtalem-auc-lead-submit::1.0)</code><br />
-<code class="highlighter-rouge">$ hget psh-registry-production ping::1.0</code></p>
+<p>to see if the entry you want to delete exists
+<code class="language-plaintext highlighter-rouge">$ hget psh-registry-qa &lt;service&gt;::&lt;version&gt; (something like adtalem-auc-lead-submit::1.0)</code>
+<code class="language-plaintext highlighter-rouge">$ hget psh-registry-production ping::1.0</code></p>
 
 <p><em>locally</em></p>
 
-<p><code class="highlighter-rouge">$ hget psh-registry &lt;service&gt;::&lt;version&gt; (something like adtalem-auc-lead-submit::1.0)</code></p>
+<p><code class="language-plaintext highlighter-rouge">$ hget psh-registry &lt;service&gt;::&lt;version&gt; (something like adtalem-auc-lead-submit::1.0)</code></p>
 
-<p>to delete the entry<br />
-<code class="highlighter-rouge">$ hdel psh-registry-qa &lt;service&gt;::&lt;version&gt; (something like adtalem-auc-lead-submit::1.0)</code></p>
+<p>to delete the entry
+<code class="language-plaintext highlighter-rouge">$ hdel psh-registry-qa &lt;service&gt;::&lt;version&gt; (something like adtalem-auc-lead-submit::1.0)</code></p>
 
-<p><strong>to view the registry in a browser</strong><br />
-<code class="highlighter-rouge">localhost:8000/registry/tasks</code></p>
+<p><strong>to view the registry in a browser</strong>
+<code class="language-plaintext highlighter-rouge">localhost:8000/registry/tasks</code></p>
 
-<p><em>or in production</em><br />
-<code class="highlighter-rouge">psh.leapfrogonline.net/registry/tasks</code></p>
+<p><em>or in production</em>
+<code class="language-plaintext highlighter-rouge">psh.leapfrogonline.net/registry/tasks</code></p>
 
 <p><strong>redis memory alerts</strong></p>
 
-<p>To run the script to expire sessions for a rogue bot ip<br />
+<p>To run the script to expire sessions for a rogue bot ip
 get the redisreporter repo https://github.com/iprospect-usa/redisreporter</p>
 
-<p><code class="highlighter-rouge">$ env/bin/python mulderexpire.py --host redis-primary.production.ause2 --ip &lt;ip to remove e.g. 94.156.174.137&gt; --limit 10000 --expire 5</code></p>
+<p><code class="language-plaintext highlighter-rouge">$ env/bin/python mulderexpire.py --host redis-primary.production.ause2 --ip &lt;ip to remove e.g. 94.156.174.137&gt; --limit 10000 --expire 5</code></p>
 
 <p><strong>To see if redis secondary was marked as the master, and how to restart redis</strong></p>
 
-<p><code class="highlighter-rouge">redis-cli -h redis-secondary.qa.ause2</code>  <br />
-then run the <code class="highlighter-rouge">info</code> command. <br />
-There is a <code class="highlighter-rouge">Replication</code> section in the output that details the role the server is currently playing</p>
+<p><code class="language-plaintext highlighter-rouge">redis-cli -h redis-secondary.qa.ause2</code><br />
+then run the <code class="language-plaintext highlighter-rouge">info</code> command. 
+There is a <code class="language-plaintext highlighter-rouge">Replication</code> section in the output that details the role the server is currently playing</p>
 
-<p>If you have access to start/stop the redis service. It would follow the normal start/stop of an lfo daemon.<br />
-<code class="highlighter-rouge">sudo systemctl stop redis.service</code></p>
+<p>If you have access to start/stop the redis service. It would follow the normal start/stop of an lfo daemon.
+<code class="language-plaintext highlighter-rouge">sudo systemctl stop redis.service</code></p>
 
 <p>wait for sentinel to</p>
 
@@ -268,14 +268,14 @@ There is a <code class="highlighter-rouge">Replication</code> section in the out
   <li>switch the server roles around</li>
 </ol>
 
-<p>then <br />
-<code class="highlighter-rouge">sudo systemctl start redis.service</code></p>
+<p>then 
+<code class="language-plaintext highlighter-rouge">sudo systemctl start redis.service</code></p>
 
 <h2 id="artifactory">artifactory</h2>
 
 <p>When having trouble acessing artifactory (from a make script) An error like</p>
 
-<p><code class="highlighter-rouge">"HTTPError Could not fetch specs from https://gems.leapfrogonline.net/"</code></p>
+<p><code class="language-plaintext highlighter-rouge">"HTTPError Could not fetch specs from https://gems.leapfrogonline.net/"</code></p>
 
 <p>Try stopping the vpn and restarting it.</p>
 
@@ -291,10 +291,10 @@ There is a <code class="highlighter-rouge">Replication</code> section in the out
 </ol>
 
 <h2 id="epi">epi</h2>
-<p><strong>sample curl string:</strong><br />
-<code class="highlighter-rouge">curl -X POST localhost:9707/v1/valid_zipcode/0.2.0 -H "Content-Type: application/x-www-form-urlencoded" -d api_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</code></p>
+<p><strong>sample curl string:</strong>
+<code class="language-plaintext highlighter-rouge">curl -X POST localhost:9707/v1/valid_zipcode/0.2.0 -H "Content-Type: application/x-www-form-urlencoded" -d api_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</code></p>
 
-<p><code class="highlighter-rouge">curl -X POST https://qa-epi.leapfrogonline.com/v1/external_configuration/1.0 -H "Content-Type: application/x-www-form-urlencoded" -d api_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -d flow_id=46</code></p>
+<p><code class="language-plaintext highlighter-rouge">curl -X POST https://qa-epi.leapfrogonline.com/v1/external_configuration/1.0 -H "Content-Type: application/x-www-form-urlencoded" -d api_token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -d flow_id=46</code></p>
 
 <h2 id="hashi">hashi</h2>
 
@@ -302,32 +302,32 @@ There is a <code class="highlighter-rouge">Replication</code> section in the out
 
 <p>to log in</p>
 
-<p><code class="highlighter-rouge">psql -h db1.qa.ause2 -U hashi -p 9999</code><br />
-^^^^^^^ logs into hashi database in qa  <br />
--h from consul services  <br />
--U from consul hashi config postgress_username  <br />
+<p><code class="language-plaintext highlighter-rouge">psql -h db1.qa.ause2 -U hashi -p 9999</code>
+^^^^^^^ logs into hashi database in qa<br />
+-h from consul services<br />
+-U from consul hashi config postgress_username<br />
 -p from consul hashi config postgress_port</p>
 
-<p>will prompt for password get it from<br />
+<p>will prompt for password get it from
 consul hashi config postgres_password</p>
 
-<p><code class="highlighter-rouge">select * from messages where topic='preview.events.geo_locate.census_features';</code></p>
+<p><code class="language-plaintext highlighter-rouge">select * from messages where topic='preview.events.geo_locate.census_features';</code></p>
 
-<p><em>to see a the last event</em><br />
-<code class="highlighter-rouge">select max(id) from messages;</code><br />
-<code class="highlighter-rouge">select * from messages where id=&lt;id returned above&gt;;</code><br />
-<code class="highlighter-rouge">select * from messages where event=events.whatever.whatever.whatever</code></p>
+<p><em>to see a the last event</em>
+<code class="language-plaintext highlighter-rouge">select max(id) from messages;</code>
+<code class="language-plaintext highlighter-rouge">select * from messages where id=&lt;id returned above&gt;;</code>
+<code class="language-plaintext highlighter-rouge">select * from messages where event=events.whatever.whatever.whatever</code></p>
 
-<p><em>another query for events</em><br />
-<code class="highlighter-rouge">select * from messages where body -&gt; 'v1' -&gt;&gt; 'flow_id' = '81';</code><br />
-<code class="highlighter-rouge">select * from messages where body -&gt; 'v1' -&gt;&gt; 'event_guid' = 'bc3a9dc1-ca41-4f2f-aa05-6d4f3e49e696';</code></p>
+<p><em>another query for events</em>
+<code class="language-plaintext highlighter-rouge">select * from messages where body -&gt; 'v1' -&gt;&gt; 'flow_id' = '81';</code>
+<code class="language-plaintext highlighter-rouge">select * from messages where body -&gt; 'v1' -&gt;&gt; 'event_guid' = 'bc3a9dc1-ca41-4f2f-aa05-6d4f3e49e696';</code></p>
 
 <h2 id="prometheus">prometheus</h2>
 <p><strong>To start the prometheus exporter for phoenix</strong></p>
 
-<p><code class="highlighter-rouge">export SKIP_SERVICE_REGISTRATION=1</code><br />
-<code class="highlighter-rouge">export PROMETHEUS_EXPORTER_PORT=9932</code><br />
-<code class="highlighter-rouge">bundle exec foreman run -e .env,.env_local lfo-prometheus-exporter --name phoenix</code></p>
+<p><code class="language-plaintext highlighter-rouge">export SKIP_SERVICE_REGISTRATION=1</code>
+<code class="language-plaintext highlighter-rouge">export PROMETHEUS_EXPORTER_PORT=9932</code>
+<code class="language-plaintext highlighter-rouge">bundle exec foreman run -e .env,.env_local lfo-prometheus-exporter --name phoenix</code></p>
 
 <p><strong>prometheus_scrape_slow error</strong></p>
 
@@ -347,20 +347,20 @@ consul hashi config postgres_password</p>
 <p>To get the consul ACL master Token look in aws dashboasrd:</p>
 
 <h2 id="cron-jobs-deployed-on-servers">Cron Jobs deployed on servers</h2>
-<p>To see what cron jobs are deployed on servers use the command:<br />
-<code class="highlighter-rouge">ls /etc/cron.d_deployed/</code></p>
+<p>To see what cron jobs are deployed on servers use the command:
+<code class="language-plaintext highlighter-rouge">ls /etc/cron.d_deployed/</code></p>
 
-<p>To check cron messages use:<br />
-<code class="highlighter-rouge">less /var/log/cron</code></p>
+<p>To check cron messages use:
+<code class="language-plaintext highlighter-rouge">less /var/log/cron</code></p>
 
-<p>To remove cron jobs from a server <br />
-execute the following command on the server(s) where the cron(s) run<br />
-<code class="highlighter-rouge">sudo /usr/bin/cron_config_remove &lt;remote_name&gt;</code><br />
-remote name is the app name + the role from catallina.yml <br />
+<p>To remove cron jobs from a server 
+execute the following command on the server(s) where the cron(s) run
+<code class="language-plaintext highlighter-rouge">sudo /usr/bin/cron_config_remove &lt;remote_name&gt;</code>
+remote name is the app name + the role from catallina.yml 
 So for psh-cox on the tolls server it would be psh-cox_tools</p>
 
-<p>The catalina command that does this is in the catalina repo at<br />
-<code class="highlighter-rouge">https://github.com/gdo-media-usa/catalina-cron/blob/main/cron.rb#L63</code></p>
+<p>The catalina command that does this is in the catalina repo at
+<code class="language-plaintext highlighter-rouge">https://github.com/gdo-media-usa/catalina-cron/blob/main/cron.rb#L63</code></p>
 
       <div class="content__nav">
       </div>
