@@ -188,50 +188,50 @@
     <main class="content">
       <p><strong>Deleting branches</strong></p>
 
-<p>To delete a <strong>REMOTE</strong> branch<br />
-<code class="highlighter-rouge">git push &lt;remote_name&gt; :&lt;branch_name&gt;</code><br />
-or (more recently<br />
-<code class="highlighter-rouge">git push &lt;remote_name&gt; --delete &lt;branch_name&gt;</code></p>
+<p>To delete a <strong>REMOTE</strong> branch
+<code class="language-plaintext highlighter-rouge">git push &lt;remote_name&gt; :&lt;branch_name&gt;</code>
+or (more recently
+<code class="language-plaintext highlighter-rouge">git push &lt;remote_name&gt; --delete &lt;branch_name&gt;</code></p>
 
-<p>To delete a <strong>LOCAL</strong> branch<br />
-<code class="highlighter-rouge">git branch -d &lt;branch_name&gt;</code><br />
-or to force<br />
-<code class="highlighter-rouge">git branch -D &lt;branch_name&gt;</code></p>
+<p>To delete a <strong>LOCAL</strong> branch
+<code class="language-plaintext highlighter-rouge">git branch -d &lt;branch_name&gt;</code>
+or to force
+<code class="language-plaintext highlighter-rouge">git branch -D &lt;branch_name&gt;</code></p>
 
 <p><strong>Stash</strong></p>
 
-<p>To stash current uncommitted changes<br />
-<code class="highlighter-rouge">git stash</code></p>
+<p>To stash current uncommitted changes
+<code class="language-plaintext highlighter-rouge">git stash</code></p>
 
-<p>To list changes stages<br />
-<code class="highlighter-rouge">git stash list</code></p>
+<p>To list changes stages
+<code class="language-plaintext highlighter-rouge">git stash list</code></p>
 
-<p>To inspect stashed changes<br />
-<code class="highlighter-rouge">git stash show</code></p>
+<p>To inspect stashed changes
+<code class="language-plaintext highlighter-rouge">git stash show</code></p>
 
-<p>To retrieve stashed changes on current branch run<br />
-<code class="highlighter-rouge">git stash apply &lt;stash&gt;</code></p>
+<p>To retrieve stashed changes on current branch run
+<code class="language-plaintext highlighter-rouge">git stash apply &lt;stash&gt;</code></p>
 
-<p>To clear all stached entries<br />
-<code class="highlighter-rouge">git stash clear</code></p>
+<p>To clear all stached entries
+<code class="language-plaintext highlighter-rouge">git stash clear</code></p>
 
-<p>To remove a single stashed entry<br />
-<code class="highlighter-rouge">git stash drop &lt;stash&gt;</code></p>
+<p>To remove a single stashed entry
+<code class="language-plaintext highlighter-rouge">git stash drop &lt;stash&gt;</code></p>
 
 <p><strong>Submodules</strong></p>
 
-<p><strong><em>After cloning a repo with submodules run the following commands</em></strong><br />
-<code class="highlighter-rouge">git submodule init</code><br />
-<code class="highlighter-rouge">git submodule update  - pull submodules down to the project</code></p>
+<p><strong><em>After cloning a repo with submodules run the following commands</em></strong>
+<code class="language-plaintext highlighter-rouge">git submodule init</code>
+<code class="language-plaintext highlighter-rouge">git submodule update  - pull submodules down to the project</code></p>
 
-<p><strong><em>To update all submodules in a repo to their master branch run</em></strong><br />
-<code class="highlighter-rouge">git submodule update --remote</code></p>
+<p><strong><em>To update all submodules in a repo to their master branch run</em></strong>
+<code class="language-plaintext highlighter-rouge">git submodule update --remote</code></p>
 
 <p><strong><em>To remove/delete a submodule</em></strong></p>
 
 <p>The 3-step removal process is:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0. mv a/submodule a/submodule_tmp
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0. mv a/submodule a/submodule_tmp
 
 1. git submodule deinit -f -- a/submodule    
 2. rm -rf .git/modules/a/submodule
@@ -249,20 +249,20 @@ or to force<br />
   <li>Log in to github and go to the “Repositories” page</li>
   <li>Click “New”, fill in the required information, and then click “Create Repository”</li>
   <li>On the local computer cd to the directory you want to make a git repo</li>
-  <li>Type <code class="highlighter-rouge">git init</code></li>
+  <li>Type <code class="language-plaintext highlighter-rouge">git init</code></li>
   <li>Set the git username and email address
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config  user.name "&lt;username&gt;"
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config  user.name "&lt;username&gt;"
 git config  user.email "&lt;email address&gt;"
 </code></pre></div>    </div>
     <p>Note: This sets the username and email for the local repository only</p>
   </li>
-  <li>Add the remote using the following format<br />
-<code class="highlighter-rouge">git remote add origin git@&lt;github username&gt;/&lt;github repo name&gt;.git</code><br />
-Note: This is not generally the exact uri you get from the “Code” dropdown in github.<br />
+  <li>Add the remote using the following format
+<code class="language-plaintext highlighter-rouge">git remote add origin git@&lt;github username&gt;/&lt;github repo name&gt;.git</code>
+Note: This is not generally the exact uri you get from the “Code” dropdown in github.
 This has the additional occurance of &lt;github username&gt; after the “@”</li>
-  <li>Type <code class="highlighter-rouge">git pull origin main</code><br />
+  <li>Type <code class="language-plaintext highlighter-rouge">git pull origin main</code>
 Note: this must be done before making any commits to the local repo</li>
-  <li>Add and push first commit<code class="highlighter-rouge">
+  <li>Add and push first commit<code class="language-plaintext highlighter-rouge">
 git add .
 git commit -m"Initial commit"
 git push --set-upstream origin main

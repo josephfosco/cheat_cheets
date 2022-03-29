@@ -186,27 +186,27 @@
 </nav>
 
     <main class="content">
-      <p><strong>T0 login to postgres commandline</strong><br />
-<code class="highlighter-rouge">sudo psql –U postgres</code></p>
+      <p><strong>T0 login to postgres commandline</strong>
+<code class="language-plaintext highlighter-rouge">sudo psql –U postgres</code></p>
 
 <p>This logs you in as the postgres user</p>
 
-<p><strong>To see all databases</strong><br />
-while logged in as postgres user<br />
-<code class="highlighter-rouge">\l</code></p>
+<p><strong>To see all databases</strong>
+while logged in as postgres user
+<code class="language-plaintext highlighter-rouge">\l</code></p>
 
-<p><strong>To connect to a specific database</strong><br />
-<code class="highlighter-rouge">\c &lt;database name&gt;</code></p>
+<p><strong>To connect to a specific database</strong>
+<code class="language-plaintext highlighter-rouge">\c &lt;database name&gt;</code></p>
 
-<p><strong>To see all database tables (locally)</strong><br />
-<code class="highlighter-rouge">\dt</code></p>
+<p><strong>To see all database tables (locally)</strong>
+<code class="language-plaintext highlighter-rouge">\dt</code></p>
 
-<p><strong>To connect to a database on a server</strong><br />
-Get the connection string from the app from consul  <br />
-It will look something like   <br />
-<code class="highlighter-rouge">postgresql://&lt;username&gt;:&lt;password&gt;@rdsqadb1-primary.cluster-c6ymrjidvw9w.us-east-2.rds.amazonaws.com:&lt;port&gt;/&lt;db&gt;</code><br />
-format to the following command  <br />
-<code class="highlighter-rouge">psql -h rdsqadb1-primary.cluster-c6ymrjidvw9w.us-east-2.rds.amazonaws.com -p &lt;port&gt; -U &lt;username&gt; -d &lt;db&gt;</code></p>
+<p><strong>To connect to a database on a server</strong>
+Get the connection string from the app from consul<br />
+It will look something like <br />
+<code class="language-plaintext highlighter-rouge">postgresql://&lt;username&gt;:&lt;password&gt;@rdsqadb1-primary.cluster-c6ymrjidvw9w.us-east-2.rds.amazonaws.com:&lt;port&gt;/&lt;db&gt;</code>
+format to the following command<br />
+<code class="language-plaintext highlighter-rouge">psql -h rdsqadb1-primary.cluster-c6ymrjidvw9w.us-east-2.rds.amazonaws.com -p &lt;port&gt; -U &lt;username&gt; -d &lt;db&gt;</code></p>
 
 
       <div class="content__nav">

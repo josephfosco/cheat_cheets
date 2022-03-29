@@ -188,22 +188,31 @@
     <main class="content">
       <p><strong>Starting ssh on Fedora</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl start sshd.service
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl start sshd.service
 systemctl enable sshd.service
 </code></pre></div></div>
 
+<p><strong>To become ‘root’ user in Fedora Linux</strong></p>
+
+<p>There is no root user record in Fedora - use the following command
+<code class="language-plaintext highlighter-rouge">sudo su -</code></p>
+
+<p><strong>To clear/reset a failed service</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">systemctl reset-failed &lt;service name&gt;</code></p>
+
 <p><strong>ls sorted by date/time</strong></p>
 
-<p>use -t flag eg: <br />
-<code class="highlighter-rouge">ls -lt</code></p>
+<p>use -t flag eg: 
+<code class="language-plaintext highlighter-rouge">ls -lt</code></p>
 
 <p><strong>To tar and gzip a directory</strong></p>
 
-<p><code class="highlighter-rouge">tar -zcvf archive-name.tar.gz directory-name</code></p>
+<p><code class="language-plaintext highlighter-rouge">tar -zcvf archive-name.tar.gz directory-name</code></p>
 
 <p>Where,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-z : Compress archive using gzip program in Linux or Unix
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-z : Compress archive using gzip program in Linux or Unix
 -c : Create archive on Linux
 -v : Verbose i.e display progress while creating archive
 -f : Archive File name
@@ -211,30 +220,30 @@ systemctl enable sshd.service
 
 <p><strong>To add additional ssh keys to ssh-agent</strong></p>
 
-<p>To add an arbitrary private key, give the path of the key file as an argument to ssh-add. For example,<br />
-<code class="highlighter-rouge">ssh-add ~/.ssh/jf_github</code><br />
+<p>To add an arbitrary private key, give the path of the key file as an argument to ssh-add. For example,
+<code class="language-plaintext highlighter-rouge">ssh-add ~/.ssh/jf_github</code>
 would add the file ~/.ssh/jf_github</p>
 
 <p><strong>To remove ssh key(s) from ssh-agent</strong></p>
 
-<p><code class="highlighter-rouge">ssh-add -D</code> removes all keys</p>
+<p><code class="language-plaintext highlighter-rouge">ssh-add -D</code> removes all keys</p>
 
 <p><strong>To connect to a wireless network from the command line</strong></p>
 
 <p>First, run</p>
 
-<p><code class="highlighter-rouge">nmcli c</code></p>
+<p><code class="language-plaintext highlighter-rouge">nmcli c</code></p>
 
-<p>This will list your connections, with the first column being the SSID, and the second column being the UUID of the connection.<br />
+<p>This will list your connections, with the first column being the SSID, and the second column being the UUID of the connection.
 Copy the UUID of the SSID you want to connect to so you can paste it into the next command.</p>
 
 <p>Next, run</p>
 
-<p><code class="highlighter-rouge">nmcli c up uuid &lt;paste uuid here&gt;</code></p>
+<p><code class="language-plaintext highlighter-rouge">nmcli c up uuid &lt;paste uuid here&gt;</code></p>
 
 <p><strong>To flush DNS cache</strong></p>
 
-<p>Nothing to do on Fedora. There is no DNS cache system by default.<br />
+<p>Nothing to do on Fedora. There is no DNS cache system by default.
 It might be necessary to clear the browser cache</p>
 
 

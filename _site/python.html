@@ -187,13 +187,13 @@
 
     <main class="content">
       <p><strong>split long strings to multiple lines in code</strong></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>long_string = ("this is a very"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>long_string = ("this is a very"
                "long string")
                "on three lines in code")
 </code></pre></div></div>
 
 <p><strong>To reload a python file in the shell</strong></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import importlib
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import importlib
 import &lt;module name&gt; #import the module here, so that it can be reloaded.
 importlib.reload(&lt;module name&gt;)
 from inputs import A # or whatever name you want.
@@ -201,16 +201,16 @@ from inputs import A # or whatever name you want.
 
 <p><strong>To run tests from one test file</strong></p>
 
-<p>In  psh-comcast change the test command in Makefile to:   <br />
-<code class="highlighter-rouge">$(HONCHO) run -e .env.test $(COVERAGE) run $(COVERAGE_OPTS) -m unittest discover comcast -k &lt;part_of_test_module_name&gt;</code><br />
-where <code class="highlighter-rouge">&lt;part_of_test_module_name&gt;</code> is any unique part of the filename of the test module you wish to test  <br />
-To test the module test_modular_offers.py you could write  <br />
-<code class="highlighter-rouge">-k modular</code></p>
+<p>In  psh-comcast change the test command in Makefile to: <br />
+<code class="language-plaintext highlighter-rouge">$(HONCHO) run -e .env.test $(COVERAGE) run $(COVERAGE_OPTS) -m unittest discover comcast -k &lt;part_of_test_module_name&gt;</code>
+where <code class="language-plaintext highlighter-rouge">&lt;part_of_test_module_name&gt;</code> is any unique part of the filename of the test module you wish to test<br />
+To test the module test_modular_offers.py you could write<br />
+<code class="language-plaintext highlighter-rouge">-k modular</code></p>
 
-<p><strong>To use a local version of a library</strong><br />
-just put the path to the local library in the requirements file  <br />
+<p><strong>To use a local version of a library</strong>
+just put the path to the local library in the requirements file<br />
 like celeryutil here (after the comment):</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>botocore==1.18.18
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>botocore==1.18.18
 boto3&gt;=1.15.0,&lt;1.16
 # celeryutil==5.2.0
 ../celeryutil/dist/celeryutil-6.0.0.tar.gz
@@ -220,14 +220,14 @@ click&gt;=7.1.2,&lt;8.0.0
 </code></pre></div></div>
 
 <p><strong>To build a python library</strong></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 -m pip install --upgrade build
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 -m pip install --upgrade build
 python3 -m build
 </code></pre></div></div>
 
 <p>The final library file will be in the ‘<strong>dist</strong>’ directory</p>
 
 <p><strong>f-strings</strong></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; name = "Eric"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; name = "Eric"
 &gt;&gt;&gt; age = 74
 &gt;&gt;&gt; f"Hello, {name}. You are {age}."
 'Hello, Eric. You are 74.'
@@ -238,61 +238,61 @@ python3 -m build
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">@</span><span class="n">patch</span><span class="p">(</span><span class="s">"objectA"</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">test1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mobj</span><span class="p">):</span>
     <span class="n">mock_method</span> <span class="o">=</span> <span class="n">MagicMock</span><span class="p">()</span>
-    <span class="n">mobj</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">mock_method</span>
+    <span class="n">mobj</span><span class="p">.</span><span class="n">method</span> <span class="o">=</span> <span class="n">mock_method</span>
     
     <span class="n">function_to_test</span><span class="p">()</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">mobj</span><span class="p">()</span><span class="o">.</span><span class="n">method</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span></code></pre></figure>
+    <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">mobj</span><span class="p">().</span><span class="n">method</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span></code></pre></figure>
 
 <p>It appears that mobj() indicates ANY instance of the class mobj</p>
 
 <p><strong>Mocking an atttribute of a class (like a method)</strong></p>
 
-<p>The following code mocks the write method of the BytesIO object to be<br />
-a MagicMock. This means when write is called, the mock will be called<br />
+<p>The following code mocks the write method of the BytesIO object to be
+a MagicMock. This means when write is called, the mock will be called
 instead, and later it is possible to check what write was called with.</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="o">@</span><span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s">'mulder.pages.blueprint.BytesIO'</span><span class="p">)</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="o">@</span><span class="n">mock</span><span class="p">.</span><span class="n">patch</span><span class="p">(</span><span class="s">'mulder.pages.blueprint.BytesIO'</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">test_download_u64encode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mbytesio</span><span class="p">):</span>
 
-                <span class="o">.</span>
-                <span class="o">.</span>
-                <span class="o">.</span>
+                <span class="p">.</span>
+                <span class="p">.</span>
+                <span class="p">.</span>
 
         <span class="n">mwrite</span><span class="o">=</span><span class="n">MagicMock</span><span class="p">()</span>
-        <span class="nb">type</span><span class="p">(</span><span class="n">mbytesio</span><span class="o">.</span><span class="n">return_value</span><span class="p">)</span><span class="o">.</span><span class="n">write</span> <span class="o">=</span> <span class="n">PropertyMock</span><span class="p">(</span><span class="n">return_value</span><span class="o">=</span><span class="n">mwrite</span><span class="p">)</span>
-        <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">test_client</span><span class="p">()</span> <span class="k">as</span> <span class="n">c</span><span class="p">:</span>
-            <span class="n">rv</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'/_download/things.html'</span><span class="p">)</span>
-            <span class="n">mwrite</span><span class="o">.</span><span class="n">assert_called_once_with</span><span class="p">(</span><span class="s">'ok'</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span></code></pre></figure>
+        <span class="nb">type</span><span class="p">(</span><span class="n">mbytesio</span><span class="p">.</span><span class="n">return_value</span><span class="p">).</span><span class="n">write</span> <span class="o">=</span> <span class="n">PropertyMock</span><span class="p">(</span><span class="n">return_value</span><span class="o">=</span><span class="n">mwrite</span><span class="p">)</span>
+        <span class="k">with</span> <span class="bp">self</span><span class="p">.</span><span class="n">app</span><span class="p">.</span><span class="n">test_client</span><span class="p">()</span> <span class="k">as</span> <span class="n">c</span><span class="p">:</span>
+            <span class="n">rv</span> <span class="o">=</span> <span class="n">c</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'/_download/things.html'</span><span class="p">)</span>
+            <span class="n">mwrite</span><span class="p">.</span><span class="n">assert_called_once_with</span><span class="p">(</span><span class="s">'ok'</span><span class="p">.</span><span class="n">encode</span><span class="p">())</span></code></pre></figure>
 
 <p><strong>Python Mocks</strong></p>
 
-<p>Pycon Mock talk<br /><br />
+<p>Pycon Mock talk<br />
 https://www.youtube.com/watch?v=ww1UsGZV8fQ</p>
 
-<p><strong>pyenv installation problems</strong><br />
-If you receive the error<br />
-<code class="highlighter-rouge">ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?</code><br />
-try<br />
-<code class="highlighter-rouge">$sudo dnf install compat-openssl10-devel --allowerasing</code><br />
-then install again. If ths works then return to normal with<br />
-<code class="highlighter-rouge">sudo dnf install openssl-devel --allowerasing</code></p>
+<p><strong>pyenv installation problems</strong>
+If you receive the error
+<code class="language-plaintext highlighter-rouge">ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?</code>
+try
+<code class="language-plaintext highlighter-rouge">$sudo dnf install compat-openssl10-devel --allowerasing</code>
+then install again. If ths works then return to normal with
+<code class="language-plaintext highlighter-rouge">sudo dnf install openssl-devel --allowerasing</code></p>
 
-<p><strong>To run the prometheus exporter for a python.django program</strong><br />
-<code class="highlighter-rouge">env/bin/honcho start -e .env,.env_local psh_comcast_prometheus</code></p>
+<p><strong>To run the prometheus exporter for a python.django program</strong>
+<code class="language-plaintext highlighter-rouge">env/bin/honcho start -e .env,.env_local psh_comcast_prometheus</code></p>
 
-<p>This is for psh-comcast<br /><br />
+<p>This is for psh-comcast<br />
 “psh_comcast_prometheus” is an entry in the procfile</p>
 
-<p><strong>List all versions of python available in pyenv</strong><br />
-<code class="highlighter-rouge">pyenv install -l</code></p>
+<p><strong>List all versions of python available in pyenv</strong>
+<code class="language-plaintext highlighter-rouge">pyenv install -l</code></p>
 
-<p><strong>Update list of python versions available to pyenv</strong><br />
-<code class="highlighter-rouge">pyenv update</code></p>
+<p><strong>Update list of python versions available to pyenv</strong>
+<code class="language-plaintext highlighter-rouge">pyenv update</code></p>
 
 <p><strong>Do not bufer log messages</strong></p>
 
-<p>Use PYTHONUNBUFFERED=1 as in<br /><br />
-<code class="highlighter-rouge">PYTHONUNBUFFERED=1 make start</code></p>
+<p>Use PYTHONUNBUFFERED=1 as in<br />
+<code class="language-plaintext highlighter-rouge">PYTHONUNBUFFERED=1 make start</code></p>
 
 
       <div class="content__nav">

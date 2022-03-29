@@ -188,10 +188,10 @@
     <main class="content">
       <p><strong>Update g2b certs</strong></p>
 
-<p>Aaron Urasky<br />
+<p>Aaron Urasky
     hey, all. i pulled in a ticket to update some g2b certs as i’m the contact person to retrieve them, going to be testing on qa shortly. but one set of commands that helped convert the client pfx cert to the pem/key we use, was:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl pkcs12 -in g2b_qa_pkcs.pfx -nocerts -out g2b_qa.key
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl pkcs12 -in g2b_qa_pkcs.pfx -nocerts -out g2b_qa.key
 openssl pkcs12 -in g2b_qa_pkcs.pfx -clcerts -nokeys -out g2b_qa.pem
 openssl rsa -in g2b_qa.key -out g2b_qa.key
 </code></pre></div></div>
