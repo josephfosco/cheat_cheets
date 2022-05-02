@@ -10,17 +10,20 @@
 - text: git
   url: /git.html
   available: true
-- text: opsbot
-  url: /opsbot.html
-  available: true
 - text: i3
   url: /i3.html
+  available: true
+- text: iProspect
+  url: /iprospect.html
   available: true
 - text: linux
   url: /linux.html
   available: true
 - text: msos
   url: /msos.html
+  available: true
+- text: opsbot
+  url: /opsbot.html
   available: true
 - text: Platform Notes
   url: /platform_notes.html
@@ -39,7 +42,4 @@
   available: true
 - text: Wordpress
   url: /wordpress.html
-  available: true
-- text: iProspect
-  url: /iprospect.html
   available: true
