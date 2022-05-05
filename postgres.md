@@ -17,7 +17,7 @@ while logged in as postgres user
 `\dt`
 
 **To list all columns in a table**
-`\d+ <table name`
+`\d+ <table name>`
 
 **To connect to a database on a server**
 Get the connection string from the app from consul  
