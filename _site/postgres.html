@@ -187,7 +187,7 @@
 
     <main class="content">
       <p><strong>T0 login to postgres commandline</strong>
-<code class="language-plaintext highlighter-rouge">sudo psql –U postgres</code></p>
+<code class="language-plaintext highlighter-rouge">psql –U postgres</code></p>
 
 <p>This logs you in as the postgres user</p>
 
@@ -200,6 +200,9 @@ while logged in as postgres user
 
 <p><strong>To see all database tables (locally)</strong>
 <code class="language-plaintext highlighter-rouge">\dt</code></p>
+
+<p><strong>To list all columns in a table</strong>
+<code class="language-plaintext highlighter-rouge">\d+ &lt;table name</code></p>
 
 <p><strong>To connect to a database on a server</strong>
 Get the connection string from the app from consul<br />
