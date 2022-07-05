@@ -116,14 +116,14 @@
         </li>
       
         <li class="navigation__link-list-item">
-          <a class="navigation__link-list-link" href="./hubot.html">
-            hubot
+          <a class="navigation__link-list-link" href="./i3.html">
+            i3
           </a>
         </li>
       
         <li class="navigation__link-list-item">
-          <a class="navigation__link-list-link" href="./i3.html">
-            i3
+          <a class="navigation__link-list-link" href="./iprospect.html">
+            iProspect
           </a>
         </li>
       
@@ -136,6 +136,12 @@
         <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./msos.html">
             msos
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./opsbot.html">
+            opsbot
           </a>
         </li>
       
@@ -175,19 +181,13 @@
           </a>
         </li>
       
-        <li class="navigation__link-list-item">
-          <a class="navigation__link-list-link" href="./iprospect.html">
-            iProspect
-          </a>
-        </li>
-      
     </ul>
   </div>
 </nav>
 
     <main class="content">
       <p><strong>T0 login to postgres commandline</strong>
-<code class="language-plaintext highlighter-rouge">sudo psql –U postgres</code></p>
+<code class="language-plaintext highlighter-rouge">psql –U postgres</code></p>
 
 <p>This logs you in as the postgres user</p>
 
@@ -200,6 +200,9 @@ while logged in as postgres user
 
 <p><strong>To see all database tables (locally)</strong>
 <code class="language-plaintext highlighter-rouge">\dt</code></p>
+
+<p><strong>To list all columns in a table</strong>
+<code class="language-plaintext highlighter-rouge">\d+ &lt;table name&gt;</code></p>
 
 <p><strong>To connect to a database on a server</strong>
 Get the connection string from the app from consul<br />

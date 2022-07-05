@@ -2,7 +2,7 @@
 ---
 
 **T0 login to postgres commandline**
-`sudo psql –U postgres`
+`psql –U postgres`
 
 This logs you in as the postgres user
 
@@ -15,6 +15,9 @@ while logged in as postgres user
 
 **To see all database tables (locally)**
 `\dt`
+
+**To list all columns in a table**
+`\d+ <table name>`
 
 **To connect to a database on a server**
 Get the connection string from the app from consul  
