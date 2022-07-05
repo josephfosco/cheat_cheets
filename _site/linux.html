@@ -246,6 +246,17 @@ Copy the UUID of the SSID you want to connect to so you can paste it into the ne
 <p>Nothing to do on Fedora. There is no DNS cache system by default.
 It might be necessary to clear the browser cache</p>
 
+<p><strong>SELinux</strong></p>
+
+<p>To see if SELinux is running
+<code class="language-plaintext highlighter-rouge">getenforce</code>
+If the response is ‘Enforcing` SELinux is running.</p>
+
+<p>To turn SELinux off
+<code class="language-plaintext highlighter-rouge">setenforce 0</code></p>
+
+<p>To turn SELinux on
+<code class="language-plaintext highlighter-rouge">setenforce 1</code></p>
 
       <div class="content__nav">
       </div>

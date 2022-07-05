@@ -62,3 +62,14 @@ Next, run
 Nothing to do on Fedora. There is no DNS cache system by default.
 It might be necessary to clear the browser cache
 
+**SELinux**
+
+To see if SELinux is running
+`getenforce`
+If the response is 'Enforcing` SELinux is running.  
+
+To turn SELinux off
+`setenforce 0`
+
+To turn SELinux on
+`setenforce 1`
