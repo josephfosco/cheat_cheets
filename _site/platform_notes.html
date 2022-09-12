@@ -302,11 +302,12 @@ There is a <code class="language-plaintext highlighter-rouge">Replication</code>
 
 <p>to log in</p>
 
-<p><code class="language-plaintext highlighter-rouge">psql -h db1.qa.ause2 -U hashi -p 9999</code>
+<p><code class="language-plaintext highlighter-rouge">psql -h rdsqadb1-primary.cluster-c6ymrjidvw9w.us-east-2.rds.amazonaws.com -U hashi -p5432 -d qa</code>
 ^^^^^^^ logs into hashi database in qa<br />
 -h from consul services<br />
 -U from consul hashi config postgress_username<br />
--p from consul hashi config postgress_port</p>
+-p from consul hashi config postgress_port<br />
+-d qa or production</p>
 
 <p>will prompt for password get it from
 consul hashi config postgres_password</p>

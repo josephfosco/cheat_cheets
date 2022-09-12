@@ -115,11 +115,12 @@ Try stopping the vpn and restarting it.
 
 to log in
 
-`psql -h db1.qa.ause2 -U hashi -p 9999`
+`psql -h rdsqadb1-primary.cluster-c6ymrjidvw9w.us-east-2.rds.amazonaws.com -U hashi -p5432 -d qa`
 ^^^^^^^ logs into hashi database in qa  
 -h from consul services  
 -U from consul hashi config postgress_username  
 -p from consul hashi config postgress\_port  
+-d qa or production
 
 will prompt for password get it from
 consul hashi config postgres\_password
