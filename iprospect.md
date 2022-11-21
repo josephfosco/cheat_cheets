@@ -1,6 +1,10 @@
 ---
 ---
 
+**To Change LFO PAssword**
+
+goto <https://passcore.leapfrogonline.com> and fill in the form to change the lfo password
+
 **Update g2b certs**
 
 Aaron Urasky

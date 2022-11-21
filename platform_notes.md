@@ -120,7 +120,7 @@ to log in
 -h from consul services  
 -U from consul hashi config postgress_username  
 -p from consul hashi config postgress\_port  
--d qa or production
+-d 'qa' or 'production'
 
 will prompt for password get it from
 consul hashi config postgres\_password

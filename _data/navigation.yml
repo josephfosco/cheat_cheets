@@ -1,6 +1,9 @@
 - text: airflow
   url: /airflow.html
   available: true
+- text: aws
+  url: /aws.html
+  available: true
 - text: emacs
   url: /emacs.html
   available: true
