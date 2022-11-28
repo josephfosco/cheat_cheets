@@ -31,4 +31,4 @@ To see the current search_path
 `show search_path;`
 
 To change the current search_path
-`set search_path='<new search path>"`
+`set search_path="<new search path>"`
