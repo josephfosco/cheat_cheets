@@ -68,6 +68,10 @@
    
   
 
+   
+   
+  
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -94,6 +98,12 @@
     <label class="navigation__menu-toggle" for="menu"><span class="cross"></span></label>
     <div class="navigation__category">Navigation</div>
     <ul class="navigation__link-list">
+      
+        <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./adsu.html">
+            adsu
+          </a>
+        </li>
       
         <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./airflow.html">
@@ -197,11 +207,11 @@
 
     <main class="content">
       <p><strong>T0 login to postgres commandline</strong>
-<code class="language-plaintext highlighter-rouge">psql –U postgres</code></p>
+<code class="language-plaintext highlighter-rouge">sudo psql –U postgres</code></p>
 
 <p>This logs you in as the postgres user</p>
 
-<p><strong>To see all databases</strong>
+<p><strong>To see all databases</strong><br />
 while logged in as postgres user
 <code class="language-plaintext highlighter-rouge">\l</code></p>
 
@@ -214,13 +224,19 @@ while logged in as postgres user
 <p><strong>To list all columns in a table</strong>
 <code class="language-plaintext highlighter-rouge">\d+ &lt;table name&gt;</code></p>
 
-<p><strong>To connect to a database on a server</strong>
+<p><strong>To connect to a database on a server</strong><br />
 Get the connection string from the app from consul<br />
 It will look something like <br />
 <code class="language-plaintext highlighter-rouge">postgresql://&lt;username&gt;:&lt;password&gt;@rdsqadb1-primary.cluster-c6ymrjidvw9w.us-east-2.rds.amazonaws.com:&lt;port&gt;/&lt;db&gt;</code>
 format to the following command<br />
 <code class="language-plaintext highlighter-rouge">psql -h rdsqadb1-primary.cluster-c6ymrjidvw9w.us-east-2.rds.amazonaws.com -p &lt;port&gt; -U &lt;username&gt; -d &lt;db&gt;</code></p>
 
+<p><strong>Search Paths</strong><br />
+To see the current search_path
+<code class="language-plaintext highlighter-rouge">show search_path;</code></p>
+
+<p>To change the current search_path
+<code class="language-plaintext highlighter-rouge">set search_path='&lt;new search path&gt;"</code></p>
 
       <div class="content__nav">
       </div>

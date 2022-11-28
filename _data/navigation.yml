@@ -1,3 +1,6 @@
+- text: adsu
+  url: /adsu.html
+  available: true
 - text: airflow
   url: /airflow.html
   available: true
