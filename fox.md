@@ -1,6 +1,13 @@
 ---
 ---
 
+**Pull production DB back to qa**
+
+Instructions are at the bottom of this page
+`https://github.com/gdo-media-usa/phoenix/tree/main/docs/deployment_checklists`
+
+**Fix fox assets**
+
 hey, for the record, assets were broken in qa fox for mobile.store.cox.com. in addition to pulling back the fox db back from production to qa (bottom of https://github.com/gdo-media-usa/phoenix/tree/main/docs/deployment_checklists), i had to run the following manually in a phoenix shell on the server:
 
 
