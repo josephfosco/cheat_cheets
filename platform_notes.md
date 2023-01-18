@@ -84,6 +84,9 @@ wait for sentinel to
 then 
 `sudo systemctl start redis.service`
 
+## Redis Memory usage investigation
+`https://github.com/gdo-media-usa/clown-car-lore/blob/345f439acf85a3fc3d8b0ad54493aa9d271c06de/investigations/2020-09-17-redis-memory-usage.md`
+
 ## artifactory
 
 When having trouble acessing artifactory (from a make script) An error like
