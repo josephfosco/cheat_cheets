@@ -43,6 +43,9 @@
 - text: tmux
   url: /tmux.html
   available: true
+- text: Teams
+  url: /teams.html
+  available: true
 - text: vi
   url: /vi.html
   available: true

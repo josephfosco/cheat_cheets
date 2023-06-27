@@ -73,3 +73,7 @@ To turn SELinux off
 
 To turn SELinux on
 `setenforce 1`
+
+**Repo Files**
+Repo files are located in the directory
+`/etc/yum.repos.d`
