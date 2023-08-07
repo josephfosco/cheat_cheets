@@ -216,7 +216,12 @@
 </nav>
 
     <main class="content">
-      <p><strong>Starting ssh on Fedora</strong></p>
+      <p><strong>Find a file</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">find . -type f -name "&lt;filename&gt;"</code>
+Filename can be full filename of wildcard like “file*”</p>
+
+<p><strong>Starting ssh on Fedora</strong></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl start sshd.service
 systemctl enable sshd.service

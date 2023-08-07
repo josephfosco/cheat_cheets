@@ -1,6 +1,11 @@
 ---
 ---
 
+**Find a file**
+
+`find . -type f -name "<filename>"`
+Filename can be full filename of wildcard like "file*"
+
 **Starting ssh on Fedora**
 
 ```
