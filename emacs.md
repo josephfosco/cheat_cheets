@@ -56,8 +56,8 @@ C-x r k (rectangular kill). That does it.
 
 **To write a file with a name similar to another file**
 
- `C-w <file-name>`
-  `M n`
+ `C-x C-w <file-name>`
+  `C-j`
   `Enter`
 
 **To bring emacs to the foreground after putting in the background**
