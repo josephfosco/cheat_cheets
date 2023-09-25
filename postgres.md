@@ -2,7 +2,7 @@
 ---
 
 **T0 login to postgres commandline**
-`sudo psql –U postgres`
+`psql –U postgres`
 
 This logs you in as the postgres user
 
