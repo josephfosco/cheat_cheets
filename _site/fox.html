@@ -64,6 +64,18 @@
    
   
 
+   
+   
+  
+
+   
+   
+  
+
+   
+   
+  
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -92,8 +104,20 @@
     <ul class="navigation__link-list">
       
         <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./adsu.html">
+            adsu
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./airflow.html">
             airflow
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./aws.html">
+            aws
           </a>
         </li>
       
@@ -170,6 +194,12 @@
         </li>
       
         <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./teams.html">
+            Teams
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./vi.html">
             vi
           </a>
@@ -186,7 +216,14 @@
 </nav>
 
     <main class="content">
-      <p>hey, for the record, assets were broken in qa fox for mobile.store.cox.com. in addition to pulling back the fox db back from production to qa (bottom of https://github.com/gdo-media-usa/phoenix/tree/main/docs/deployment_checklists), i had to run the following manually in a phoenix shell on the server:</p>
+      <p><strong>Pull production DB back to qa</strong></p>
+
+<p>Instructions are at the bottom of this page
+<code class="language-plaintext highlighter-rouge">https://github.com/gdo-media-usa/phoenix/tree/main/docs/deployment_checklists</code></p>
+
+<p><strong>Fix fox assets</strong></p>
+
+<p>hey, for the record, assets were broken in qa fox for mobile.store.cox.com. in addition to pulling back the fox db back from production to qa (bottom of https://github.com/gdo-media-usa/phoenix/tree/main/docs/deployment_checklists), i had to run the following manually in a phoenix shell on the server:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>site = Site.where(domain: "mobile.store.cox.com").first
 cinval = Caching::Invalidation.new(nil)

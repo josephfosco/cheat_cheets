@@ -31,6 +31,45 @@ Ctrl+space
 Highlight text through thelast line of the Region
 Alt+x string-insert-rectangle
 ```
+**To indent/unindent a block of text**
+
+Use column mode.
+
+Select the lines in column mode, then add four spaces to all of them at once:
+
+    1. Jump to column 1 of the first line you want to indent.
+    2. C-<space> to set mark
+    3. move the point down to the last lines (stay in column one)
+    4. C-x r t to enter column mode (or C-<RET> if you've got CUA mode)
+    5. <space><space><space><space><RET>
+
+You can do a similar maneuver to delete four spaces -- just include 4 columns in your marked region (steps 2-3) and hit \<DEL\>
+
+
+**To unindent**
+
+Rectangle selection is my preferred way of doing this.
+
+Put yourself at the beginning of the first line, C-space, go to the last line,
+and the end of the indentation you want to remove and
+C-x r k (rectangular kill). That does it.
+
+**To write a file with a name similar to another file**
+
+ `C-x C-w <file-name>`
+  `C-j`
+  `Enter`
+
+**To bring emacs to the foreground after putting in the background**
+
+`fg` or `fg %emacs`
+
+**Open a new buffer for a new file**
+
+Do not search for other directories for a file with the name typed
+
+ `C-x C-c C-f>`
+
 **Return to prior buffer layout**
 
  `C-c <left arrow>`

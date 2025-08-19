@@ -19,6 +19,14 @@ The string in the records.Database call can be found at: `https://consul.leapfro
 **Files created in Airflow dags are stored at**
 `tools1.qa.ause2, cd into /mnt/etlfs/airflow/files (maybe su to deploy first?)`
 
+**To see running DAGS - to locate long running DAGS**
+`https://airflow.leapfrogonline.net/taskinstance/list/?_flt_7_state=success&_flt_7_state=skipped&_flt_5_state=failed`
+
+**To restart airflow scheduler**
+
+- log on to the tools server
+- `sudo systemctl restart lfo-datateam-airflow-scheduler-1.service`
+- `sudo systemctl restart lfo-datateam-airflow-scheduler-2.service`
 
 
 

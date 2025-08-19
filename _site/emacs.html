@@ -64,6 +64,18 @@
    
   
 
+   
+   
+  
+
+   
+   
+  
+
+   
+   
+  
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -92,8 +104,20 @@
     <ul class="navigation__link-list">
       
         <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./adsu.html">
+            adsu
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./airflow.html">
             airflow
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./aws.html">
+            aws
           </a>
         </li>
       
@@ -170,6 +194,12 @@
         </li>
       
         <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./teams.html">
+            Teams
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./vi.html">
             vi
           </a>
@@ -241,6 +271,45 @@ Ctrl+space
 Highlight text through thelast line of the Region
 Alt+x string-insert-rectangle
 </code></pre></div></div>
+<p><strong>To indent/unindent a block of text</strong></p>
+
+<p>Use column mode.</p>
+
+<p>Select the lines in column mode, then add four spaces to all of them at once:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Jump to column 1 of the first line you want to indent.
+2. C-&lt;space&gt; to set mark
+3. move the point down to the last lines (stay in column one)
+4. C-x r t to enter column mode (or C-&lt;RET&gt; if you've got CUA mode)
+5. &lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;RET&gt;
+</code></pre></div></div>
+
+<p>You can do a similar maneuver to delete four spaces – just include 4 columns in your marked region (steps 2-3) and hit &lt;DEL&gt;</p>
+
+<p><strong>To unindent</strong></p>
+
+<p>Rectangle selection is my preferred way of doing this.</p>
+
+<p>Put yourself at the beginning of the first line, C-space, go to the last line,
+and the end of the indentation you want to remove and
+C-x r k (rectangular kill). That does it.</p>
+
+<p><strong>To write a file with a name similar to another file</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">C-x C-w &lt;file-name&gt;</code>
+  <code class="language-plaintext highlighter-rouge">C-j</code>
+  <code class="language-plaintext highlighter-rouge">Enter</code></p>
+
+<p><strong>To bring emacs to the foreground after putting in the background</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">fg</code> or <code class="language-plaintext highlighter-rouge">fg %emacs</code></p>
+
+<p><strong>Open a new buffer for a new file</strong></p>
+
+<p>Do not search for other directories for a file with the name typed</p>
+
+<p><code class="language-plaintext highlighter-rouge">C-x C-c C-f&gt;</code></p>
+
 <p><strong>Return to prior buffer layout</strong></p>
 
 <p><code class="language-plaintext highlighter-rouge">C-c &lt;left arrow&gt;</code></p>

@@ -64,6 +64,18 @@
    
   
 
+   
+   
+  
+
+   
+   
+  
+
+   
+   
+  
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -92,8 +104,20 @@
     <ul class="navigation__link-list">
       
         <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./adsu.html">
+            adsu
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./airflow.html">
             airflow
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./aws.html">
+            aws
           </a>
         </li>
       
@@ -170,6 +194,12 @@
         </li>
       
         <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./teams.html">
+            Teams
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./vi.html">
             vi
           </a>
@@ -186,7 +216,12 @@
 </nav>
 
     <main class="content">
-      <p><strong>Starting ssh on Fedora</strong></p>
+      <p><strong>Find a file</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">find . -type f -name "&lt;filename&gt;"</code>
+Filename can be full filename of wildcard like “file*”</p>
+
+<p><strong>Starting ssh on Fedora</strong></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl start sshd.service
 systemctl enable sshd.service
@@ -257,6 +292,10 @@ If the response is ‘Enforcing` SELinux is running.</p>
 
 <p>To turn SELinux on
 <code class="language-plaintext highlighter-rouge">setenforce 1</code></p>
+
+<p><strong>Repo Files</strong>
+Repo files are located in the directory
+<code class="language-plaintext highlighter-rouge">/etc/yum.repos.d</code></p>
 
       <div class="content__nav">
       </div>

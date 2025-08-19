@@ -64,6 +64,18 @@
    
   
 
+   
+   
+  
+
+   
+   
+  
+
+   
+   
+  
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -92,8 +104,20 @@
     <ul class="navigation__link-list">
       
         <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./adsu.html">
+            adsu
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./airflow.html">
             airflow
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./aws.html">
+            aws
           </a>
         </li>
       
@@ -170,6 +194,12 @@
         </li>
       
         <li class="navigation__link-list-item">
+          <a class="navigation__link-list-link" href="./teams.html">
+            Teams
+          </a>
+        </li>
+      
+        <li class="navigation__link-list-item">
           <a class="navigation__link-list-link" href="./vi.html">
             vi
           </a>
@@ -204,6 +234,17 @@
 
 <p><strong>Files created in Airflow dags are stored at</strong>
 <code class="language-plaintext highlighter-rouge">tools1.qa.ause2, cd into /mnt/etlfs/airflow/files (maybe su to deploy first?)</code></p>
+
+<p><strong>To see running DAGS - to locate long running DAGS</strong>
+<code class="language-plaintext highlighter-rouge">https://airflow.leapfrogonline.net/taskinstance/list/?_flt_7_state=success&amp;_flt_7_state=skipped&amp;_flt_5_state=failed</code></p>
+
+<p><strong>To restart airflow scheduler</strong></p>
+
+<ul>
+  <li>log on to the tools server</li>
+  <li><code class="language-plaintext highlighter-rouge">sudo systemctl restart lfo-datateam-airflow-scheduler-1.service</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sudo systemctl restart lfo-datateam-airflow-scheduler-2.service</code></li>
+</ul>
 
 
       <div class="content__nav">

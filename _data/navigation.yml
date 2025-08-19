@@ -1,5 +1,11 @@
+- text: adsu
+  url: /adsu.html
+  available: true
 - text: airflow
   url: /airflow.html
+  available: true
+- text: aws
+  url: /aws.html
   available: true
 - text: emacs
   url: /emacs.html
@@ -36,6 +42,9 @@
   available: true
 - text: tmux
   url: /tmux.html
+  available: true
+- text: Teams
+  url: /teams.html
   available: true
 - text: vi
   url: /vi.html

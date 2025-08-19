@@ -84,6 +84,9 @@ wait for sentinel to
 then 
 `sudo systemctl start redis.service`
 
+## Redis Memory usage investigation
+`https://github.com/gdo-media-usa/clown-car-lore/blob/345f439acf85a3fc3d8b0ad54493aa9d271c06de/investigations/2020-09-17-redis-memory-usage.md`
+
 ## artifactory
 
 When having trouble acessing artifactory (from a make script) An error like
@@ -115,11 +118,12 @@ Try stopping the vpn and restarting it.
 
 to log in
 
-`psql -h db1.qa.ause2 -U hashi -p 9999`
+`psql -h rdsqadb1-primary.cluster-c6ymrjidvw9w.us-east-2.rds.amazonaws.com -U hashi -p5432 -d qa`
 ^^^^^^^ logs into hashi database in qa  
 -h from consul services  
 -U from consul hashi config postgress_username  
 -p from consul hashi config postgress\_port  
+-d 'qa' or 'production'
 
 will prompt for password get it from
 consul hashi config postgres\_password
